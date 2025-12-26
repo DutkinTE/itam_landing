@@ -69,18 +69,15 @@
     color: var(--text-primary);
 }
 
-.hero__moreIcon {
-    opacity: .75;
-    transform: translateY(-1px);
-}
-
 @keyframes hero-more-bounce {
     0% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(-6px);
     }
+
     100% {
         transform: translateY(0);
     }
