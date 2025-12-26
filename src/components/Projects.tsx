@@ -1,11 +1,11 @@
 import { type JSX } from "react";
 import "./projects.css";
 
-type Project = {
-    title: string;
-    desc: string;
-    tag: string;
-};
+// type Project = {
+//     title: string;
+//     desc: string;
+//     tag: string;
+// };
 
 export default function Projects(): JSX.Element {
     // const projects: Project[] = [
