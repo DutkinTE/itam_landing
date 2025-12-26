@@ -6,7 +6,7 @@ export default function Header(): JSX.Element {
         <header className="header">
             <div className="container header__inner">
                 <div className="brand">
-                    <img src="public/Logo.svg" className="brand__mark" />
+                    <img src="./public/Logo.svg" className="brand__mark" />
                 </div>
 
 
