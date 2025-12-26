@@ -6,12 +6,10 @@ export default function Header(): JSX.Element {
         <header className="header">
             <div className="container header__inner">
                 <div className="brand">
-                    <img src="./Logo.svg" className="brand__mark" />
+                    <img src="./images/Logo.svg" alt="Логотип IT at MISIS" className="brand__mark" />
                 </div>
-
-
                 <nav className="nav" aria-label="Навигация">
-                    <a className="nav__link" href="#hero">
+                    <a className="nav__link" href="#highest-point">
                         Главная
                     </a>
                     <a className="nav__link" href="#projects">

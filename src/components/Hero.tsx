@@ -3,7 +3,7 @@ import "./hero.css";
 
 export default function Hero(): JSX.Element {
   return (
-    <section className="hero hero--misis" id="about">
+    <section className="hero hero--misis" id="hero">
       <div className="hero__bg" aria-hidden="true" />
 
       <div className="container hero__layout">

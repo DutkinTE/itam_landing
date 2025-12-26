@@ -7,12 +7,36 @@
   --white-main: #FAFAFA;
   --bg-tertiary-block: rgba(250, 250, 250, 0.09);
   --bg-secondary-block: #171618;
-  --bg-primary: #0E0D0F;
+  --bg-primary: rgba(14, 13, 15, 1);
   --brand-100: rgba(93, 75, 220, 0.05);
   --brand-alt-main: rgba(129, 116, 226, 1);
   --icon-secondary: rgba(250, 250, 250, 0.4);
   --icon-primary: rgba(250, 250, 250, 0.88);
   --black-100: rgba(14, 13, 15, 0.06);
+}
+
+@font-face {
+  font-family: 'NTSomic';
+  src: url('/fonts/NTSomic/NTSomic-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NTSomic';
+  src: url('/fonts/NTSomic/NTSomic-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NTSomic';
+  src: url('/fonts/NTSomic/NTSomic-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
 }
 
 html {
@@ -24,6 +48,7 @@ html {
 body {
   margin: 0;
   padding: 0;
+  font-family: 'NTSomic', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 .container {
