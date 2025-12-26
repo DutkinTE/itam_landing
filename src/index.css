@@ -1,0 +1,33 @@
+:root {
+  --text-secondary: rgba(250, 250, 250, 0.6);
+  --text-primary: #FAFAFA;
+  --text-primary-inverse: #0E0D0F;
+  --text-brand: #8174E2;
+  --white-400: rgba(250, 250, 250, 0.4);
+  --white-main: #FAFAFA;
+  --bg-tertiary-block: rgba(250, 250, 250, 0.09);
+  --bg-secondary-block: #171618;
+  --bg-primary: #0E0D0F;
+  --brand-100: rgba(93, 75, 220, 0.05);
+  --brand-alt-main: rgba(129, 116, 226, 1);
+  --icon-secondary: rgba(250, 250, 250, 0.4);
+  --icon-primary: rgba(250, 250, 250, 0.88);
+  --black-100: rgba(14, 13, 15, 0.06);
+}
+
+html {
+  scroll-behavior: smooth;
+  padding: 0;
+  background-color: var(--bg-primary);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-inline: 100px;
+}

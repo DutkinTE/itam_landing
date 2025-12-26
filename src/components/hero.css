@@ -1,0 +1,82 @@
+@charset "utf-8";
+
+
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero__bg {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(rgba(255, 255, 255, .035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, .035) 1px, transparent 1px);
+    background-size: 64px 64px;
+    opacity: .55;
+}
+
+.hero__layout {
+    position: relative;
+    height: 761px;
+    padding: 80px 0;
+}
+
+.hero__title {
+    color: var(--text-primary);
+    font-weight: bold;
+    line-height: 1.05;
+    font-size: 96px;
+}
+
+.hero__title--misis {
+    margin: 0;
+    font-weight: 750;
+    letter-spacing: -0.02em;
+    line-height: 1.02;
+}
+
+.hero__desc {
+    position: absolute;
+    right: 0;
+    bottom: 80px;
+    margin: 0;
+    max-width: 560px;
+    text-align: right;
+    font-size: 22px;
+    font-weight: normal;
+    line-height: 1.1;
+    color: var(--text-secondary);
+}
+
+.hero__more {
+    position: absolute;
+    left: 0;
+    bottom: 80px;
+    display: inline-flex;
+    text-decoration: none;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-secondary);
+    font-size: 14px;
+    font-weight: normal;
+    letter-spacing: .01em;
+    padding: 10px 0;
+    user-select: none;
+    transition: .2s ease;
+}
+
+.hero__more:hover {
+    color: var(--text-primary);
+}
+
+.hero__moreIcon {
+    opacity: .75;
+    transform: translateY(-1px);
+}
+
+.hero--misis {
+    position: relative;
+    padding: 0;
+    overflow: hidden;
+}
