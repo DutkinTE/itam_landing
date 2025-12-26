@@ -27,7 +27,7 @@ export default function Projects(): JSX.Element {
     // ];
 
     return (
-        <section className="projects" id="projects">
+        <section className="projects" >
             <div className="container">
                 <div className="projects__title">
                     ПРОЕКТЫ
