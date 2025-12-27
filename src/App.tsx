@@ -5,7 +5,7 @@ import Projects from './components/Projects'
 import About from './components/About'
 import Achievements from './components/Achievements'
 import Partners from './components/Partners'
-import Clubs from './components/clubs'
+import Clubs from './components/Clubs'
 
 function App() {
   return (
@@ -13,7 +13,6 @@ function App() {
       <Header />
       <Hero />
       <main>
-
         <About />
         <Projects />
         <Clubs />

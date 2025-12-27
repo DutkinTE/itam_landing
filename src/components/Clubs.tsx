@@ -2,7 +2,7 @@ import { type JSX } from "react";
 import "./clubs.css";
 
 export default function Clubs(): JSX.Element {
-    const clubs = [
+    const clubsList = [
         "Хакатон клуб",
         "Дизайн клуб",
         "AI-knowledge клуб",
@@ -26,7 +26,7 @@ export default function Clubs(): JSX.Element {
 
                     <div className="clubs__listWrapper">
                         <div className="clubs__list">
-                            {clubs.map((name) => (
+                            {clubsList.map((name) => (
                                 <div className="clubs__item" key={name}>
                                     <div className="clubs__itemLabel">{name}</div>
                                 </div>
