@@ -10,8 +10,9 @@ function App() {
   return (
     <div className="page" id="highest-point">
       <Header />
+      <Hero />
       <main>
-        <Hero />
+
         <About />
         <Projects />
         <Achievements />

@@ -23,27 +23,35 @@ export default function Partners(): JSX.Element {
                     </div>
 
                     <div className="partners__logosSection">
-                        <div className="partners__logosRow">
-                            <div className="partners__logoBlock partners__logoBlock--w167h45" />
-                            <img
-                                className="partners__logoImage partners__logoImage--w161h27"
-                                src="https://placehold.co/161x27"
-                                alt="Логотип партнёра"
-                            />
-                            <div className="partners__logoBlock partners__logoBlock--w114h45" />
-                            <div className="partners__logoBlock partners__logoBlock--w164h39" />
-                            <div className="partners__logoBlock partners__logoBlock--w70h39" />
-                            <div className="partners__logoBlock partners__logoBlock--w272h40" />
-                            <img
-                                className="partners__logoImage partners__logoImage--w126h39"
-                                src="https://placehold.co/126x39"
-                                alt="Логотип партнёра"
-                            />
-                            <div className="partners__logoBlock partners__logoBlock--w210h45" />
-                            <div className="partners__logoBlock partners__logoBlock--w110h43" />
-                            <div className="partners__logoBlock partners__logoBlock--w200h45" />
-                            <div className="partners__logoBlock partners__logoBlock--w233h45" />
-                            <div className="partners__logoBlock partners__logoBlock--w176h19" />
+                        <div className="partners__logosViewport" aria-hidden="true">
+                            <div className="partners__logosRow partners__logosRow--marquee">
+                                <img className="partners__logoImage" src="/images/Vector-2.svg" alt="Логотип партнёра" />
+                                <img className="partners__logoImage" src="/images/Vector-3.svg" alt="Логотип партнёра" />
+                                <img className="partners__logoImage" src="/images/Vector-4.svg" alt="Логотип партнёра" />
+                                <img className="partners__logoImage" src="/images/Vector-5.svg" alt="Логотип партнёра" />
+                                <img className="partners__logoImage" src="/images/Vector-6.svg" alt="Логотип партнёра" />
+                                <img className="partners__logoImage" src="/images/Vector-7.svg" alt="Логотип партнёра" />
+                                <img className="partners__logoImage" src="/images/Vector-8.svg" alt="Логотип партнёра" />
+                                <img className="partners__logoImage" src="/images/Vector-9.svg" alt="Логотип партнёра" />
+                                <img className="partners__logoImage" src="/images/Vector-10.svg" alt="Логотип партнёра" />
+                                <img className="partners__logoImage" src="/images/Vector-11.svg" alt="Логотип партнёра" />
+                                <img className="partners__logoImage" src="/images/Vector-12.svg" alt="Логотип партнёра" />
+                                <img className="partners__logoImage" src="/images/Vector-13.svg" alt="Логотип партнёра" />
+
+                                {/* дублируем логотипы для бесшовной анимации */}
+                                <img className="partners__logoImage" src="/images/Vector-2.svg" alt="" />
+                                <img className="partners__logoImage" src="/images/Vector-3.svg" alt="" />
+                                <img className="partners__logoImage" src="/images/Vector-4.svg" alt="" />
+                                <img className="partners__logoImage" src="/images/Vector-5.svg" alt="" />
+                                <img className="partners__logoImage" src="/images/Vector-6.svg" alt="" />
+                                <img className="partners__logoImage" src="/images/Vector-7.svg" alt="" />
+                                <img className="partners__logoImage" src="/images/Vector-8.svg" alt="" />
+                                <img className="partners__logoImage" src="/images/Vector-9.svg" alt="" />
+                                <img className="partners__logoImage" src="/images/Vector-10.svg" alt="" />
+                                <img className="partners__logoImage" src="/images/Vector-11.svg" alt="" />
+                                <img className="partners__logoImage" src="/images/Vector-12.svg" alt="" />
+                                <img className="partners__logoImage" src="/images/Vector-13.svg" alt="" />
+                            </div>
                         </div>
 
                         <div className="partners__statsRow">
