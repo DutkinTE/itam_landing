@@ -6,6 +6,8 @@ import About from './components/About'
 import Achievements from './components/Achievements'
 import Partners from './components/Partners'
 import Clubs from './components/Clubs'
+import News from './components/News'
+import Team from './components/Team'
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
         <Clubs />
         <Achievements />
         <Partners />
+        <News />
+        <Team />
       </main>
     </div>
   )

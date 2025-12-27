@@ -18,7 +18,7 @@ export default function Achievements(): JSX.Element {
                     <div className="achievements__leadWrapper">
                         <p className="achievements__lead">
                             Участники коммьюнити демонстрируют постоянный профессиональный рост и регулярно
-                            добиваются впечатляющих успехов в престижных соревнованиях самого разного профиля.
+                            добиваются впечатляющих успехов в престижных соревнованиях самого разного профиля
                         </p>
                     </div>
 
@@ -58,7 +58,7 @@ export default function Achievements(): JSX.Element {
                     <div className="achievements__list">
                         <div className="achievements__listHeader">
                             <h3 className="achievements__listTitle">
-                                Последние 20 затащенных хакатонов 2025:
+                                Последние 10 затащенных хакатонов 2025:
                             </h3>
                         </div>
 
@@ -141,6 +141,48 @@ export default function Achievements(): JSX.Element {
                                 </div>
                                 <div className="achievements__listCell achievements__listCell--team">
                                     Динозаврики МИСИС
+                                </div>
+                                <div className="achievements__listCell achievements__listCell--place">
+                                    1 место
+                                </div>
+                            </div>
+
+                            <div className="achievements__listSeparator" />
+
+                            <div className="achievements__listRow">
+                                <div className="achievements__listCell achievements__listCell--event">
+                                    МТС Система Хак: Нижний Новгород
+                                </div>
+                                <div className="achievements__listCell achievements__listCell--team">
+                                    14-Bit MISIS
+                                </div>
+                                <div className="achievements__listCell achievements__listCell--place">
+                                    1 место
+                                </div>
+                            </div>
+
+                            <div className="achievements__listSeparator" />
+
+                            <div className="achievements__listRow">
+                                <div className="achievements__listCell achievements__listCell--event">
+                                    МТС Система Хак: Нижний Новгород
+                                </div>
+                                <div className="achievements__listCell achievements__listCell--team">
+                                    14-Bit MISIS
+                                </div>
+                                <div className="achievements__listCell achievements__listCell--place">
+                                    1 место
+                                </div>
+                            </div>
+
+                            <div className="achievements__listSeparator" />
+
+                            <div className="achievements__listRow">
+                                <div className="achievements__listCell achievements__listCell--event">
+                                    МТС Система Хак: Нижний Новгород
+                                </div>
+                                <div className="achievements__listCell achievements__listCell--team">
+                                    14-Bit MISIS
                                 </div>
                                 <div className="achievements__listCell achievements__listCell--place">
                                     1 место

@@ -28,6 +28,11 @@ export default function Clubs(): JSX.Element {
                         <div className="clubs__list">
                             {clubsList.map((name) => (
                                 <div className="clubs__item" key={name}>
+                                    <img
+                                        className="clubs__iconArrowRight"
+                                        src="./images/Union.svg"
+                                        alt="logo arrow right"
+                                    />
                                     <div className="clubs__itemLabel">{name}</div>
                                 </div>
                             ))}
@@ -40,4 +45,3 @@ export default function Clubs(): JSX.Element {
         </section>
     );
 }
-

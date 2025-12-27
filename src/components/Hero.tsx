@@ -10,7 +10,7 @@ export default function Hero(): JSX.Element {
                 <h1 className="hero__title hero__title--misis">IT at MISIS</h1>
 
                 <p className="hero__desc">
-                    IT-комьюнити нового поколения, состоящее
+                    ИТ-комьюнити нового поколения, состоящее
                     <br />
                     из мотивированных и талантливых участников.
                 </p>
