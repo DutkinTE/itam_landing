@@ -15,7 +15,7 @@ export default function Hero(): JSX.Element {
                     из мотивированных и талантливых участников.
                 </p>
 
-                <a className="hero__more" href="#projects" id="projects">
+                <a className="hero__more" href="#afterHero" id="afterHero">
                     <svg
                         className="hero__moreIcon"
                         width="20"
