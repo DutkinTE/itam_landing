@@ -13,7 +13,7 @@ export default function Header(): JSX.Element {
             <div className={isActive ? "header__active" : "header__disabled"}>
                 <div className="container header__inner">
                     <div className="brand">
-                        <img src="./images/Logo.svg" alt="Логотип IT at MISIS" className="brand__mark" />
+                        <a href="/"><img src="./images/Logo.svg" alt="Логотип IT at MISIS" className="brand__mark" /></a>
                     </div>
                     <button
                         type="button"

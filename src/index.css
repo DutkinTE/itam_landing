@@ -14,6 +14,8 @@
   --icon-secondary: rgba(250, 250, 250, 0.4);
   --icon-primary: rgba(250, 250, 250, 0.88);
   --black-100: rgba(14, 13, 15, 0.06);
+  --controls-buttons-ghost-hover: rgba(129, 116, 226, 0.04);
+  --controls-buttons-ghost-press: rgba(129, 116, 226, 0.09);
 }
 
 @font-face {

@@ -1,0 +1,153 @@
+@charset "utf-8";
+
+.wins {
+    padding: 120px 0 80px;
+}
+
+.wins__hero {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 64px;
+}
+
+.wins__title {
+    margin: 0;
+    color: var(--text-primary);
+    font-size: 96px;
+    font-family: 'NTSomic', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-weight: 400;
+    line-height: 115.2px;
+}
+
+.wins__filters {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.wins__filter {
+    height: 48px;
+    padding: 12px 20px;
+    border-radius: 16px;
+    border: none;
+    background: transparent;
+    color: var(--text-primary);
+    font-size: 16px;
+    font-family: 'NTSomic', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-weight: 400;
+    line-height: 20.8px;
+    cursor: default;
+    transition: all 0.3s ease-out;
+}
+
+.wins__filter:hover {
+    background: var(--controls-buttons-ghost-hover);
+}
+
+.wins__filter:active {
+    background: var(--controls-buttons-ghost-press);
+}
+
+.wins__filter--active {
+    background: var(--white-main);
+    color: var(--text-primary-inverse);
+}
+
+.wins__table {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.wins__tableHeader {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wins__headerCell {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--text-primary);
+    font-size: 24px;
+    font-family: 'NTSomic', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-weight: 400;
+    line-height: 28.8px;
+}
+
+.wins__headerCell--event {
+    width: 550px;
+}
+
+.wins__headerCell--team {
+    width: 450px;
+}
+
+.wins__headerCell--place {
+    width: 90px;
+}
+
+.wins__rows {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.wins__row {
+    padding: 16px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.wins__rowGroup {
+    transition: all 0.3s ease-out;
+
+    color: var(--text-secondary);
+}
+
+.wins__rowGroup:hover {
+    background: var(--brand-alt-main);
+    color: var(--text-primary);
+}
+
+.wins__cell {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 24px;
+    font-family: 'NTSomic', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-weight: 400;
+    line-height: 28.8px;
+}
+
+.wins__cell--event {
+    width: 550px;
+}
+
+.wins__cell--team {
+    width: 450px;
+}
+
+.wins__cell--place {
+    width: 90px;
+    color: var(--text-primary);
+}
+
+.wins__divider {
+    width: 100%;
+    height: 0;
+    border-top: 1px solid #505050;
+    opacity: 0.6;
+}
+
+.wins__divider--strong {
+    border-color: var(--white-main);
+    opacity: 1;
+}

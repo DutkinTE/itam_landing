@@ -207,7 +207,7 @@ export default function Achievements(): JSX.Element {
                         </div>
                     </div>
 
-                    <div className="achievements__more">
+                    <a className="achievements__more" href="/wins">
                         <div className="achievements__moreRow">
                             <span className="achievements__moreLabel">Смотреть все</span>
                             <span className="achievements__moreSquare" >
@@ -227,7 +227,7 @@ export default function Achievements(): JSX.Element {
                             </span>
                         </div>
                         <div className="achievements__moreLine" />
-                    </div>
+                    </a>
                 </div>
             </div>
         </section>
