@@ -16,9 +16,27 @@ export default function Hero(): JSX.Element {
                 </p>
 
                 <a className="hero__more" href="#projects" id="projects">
-                    <span className="hero__moreIcon" aria-hidden="true">↓</span>
+                    <svg
+                        className="hero__moreIcon"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true"
+                    >
+                        <path d="M11.7161 13.532L17 8.18958V12.9681L10.0452 20L3 12.8768V8.09828L8.37418 13.532V0L11.7161 0V13.532Z" />
+                    </svg>
                     <span>Смотреть подробнее</span>
-                    <span className="hero__moreIcon" aria-hidden="true">↓</span>
+                    <svg
+                        className="hero__moreIcon"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true"
+                    >
+                        <path d="M11.7161 13.532L17 8.18958V12.9681L10.0452 20L3 12.8768V8.09828L8.37418 13.532V0L11.7161 0V13.532Z" />
+                    </svg>
                 </a>
             </div>
         </section>

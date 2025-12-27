@@ -88,3 +88,13 @@
     padding: 0;
     overflow: hidden;
 }
+
+.hero__moreIcon {
+    opacity: .75;
+    transform: translateY(-1px);
+    color: inherit;
+}
+
+.hero__moreIcon path {
+    fill: currentColor;
+}
