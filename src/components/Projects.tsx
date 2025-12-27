@@ -33,18 +33,8 @@ export default function Projects(): JSX.Element {
 
     const [activeIndex, setActiveIndex] = useState(0);
 
-    const projectsCount = projects.length;
-
-    const getWrappedIndex = (index: number): number => {
-        const mod = index % projectsCount;
-        return mod < 0 ? mod + projectsCount : mod;
-    };
-
-    const visible = [
-        { project: projects[getWrappedIndex(activeIndex - 1)], index: getWrappedIndex(activeIndex - 1), position: "prev" as const },
-        { project: projects[getWrappedIndex(activeIndex)], index: getWrappedIndex(activeIndex), position: "current" as const },
-        { project: projects[getWrappedIndex(activeIndex + 1)], index: getWrappedIndex(activeIndex + 1), position: "next" as const },
-    ];
+    const currentIndex = activeIndex;
+    const trackTransform = `translateX(calc(50vw - 417px - (1072px * ${currentIndex})))`;
 
     return (
         <section className="projects" >
@@ -77,38 +67,53 @@ export default function Projects(): JSX.Element {
 
 
             </div>
-                <div className="projects__carousel">
-                    <div className="projects__track">
-                        {visible.map(({ project, index, position }) => (
+            <div className="projects__carousel">
+                <div
+                    className="projects__track"
+                    style={{ transform: trackTransform }}
+                >
+                    {projects.map((project, index) => {
+                        let positionClass = "projects__card--rest";
+
+                        if (index === activeIndex) {
+                            positionClass = "projects__card--current";
+                        } else if (index === activeIndex - 1) {
+                            positionClass = "projects__card--prev";
+                        } else if (index === activeIndex + 1) {
+                            positionClass = "projects__card--next";
+                        }
+
+                        const isCurrent = index === activeIndex;
+
+                        return (
                             <article
-                                className={`projects__card projects__card--${position}`}
-                                key={`${project.title}-${position}`}
-                                onClick={position === "current" ? undefined : () => setActiveIndex(index)}
+                                className={`projects__card ${positionClass}`}
+                                key={project.title}
+                                onClick={
+                                    isCurrent ? undefined : () => setActiveIndex(index)
+                                }
                             >
-                                <div className="projects__cardImageWrapper">
-                                    <img
-                                        className="projects__cardImage"
+                                <img
+                                    className="projects__cardImage"
                                     src={project.img}
                                     alt={project.title}
-                                        loading="lazy"
-                                    />
-                                </div>
-                                {position === "current" && (
-                                    <div className="projects__cardContent">
-                                        <h3 className="projects__cardTitle">{project.title}</h3>
-                                        <div className="projects__cardTags">
-                                            {project.tags.map((tag) => (
-                                                <span className="projects__cardTag" key={tag}>
-                                                    {tag}
-                                                </span>
-                                            ))}
-                                        </div>
+                                    loading="lazy"
+                                />
+                                <div className="projects__cardContent">
+                                    <h3 className="projects__cardTitle">{project.title}</h3>
+                                    <div className="projects__cardTags">
+                                        {project.tags.map((tag) => (
+                                            <span className="projects__cardTag" key={tag + project.title}>
+                                                {tag}
+                                            </span>
+                                        ))}
                                     </div>
-                                )}
+                                </div>
                             </article>
-                        ))}
-                    </div>
+                        );
+                    })}
                 </div>
+            </div>
         </section>
     );
 }
