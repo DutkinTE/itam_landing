@@ -68,10 +68,6 @@ export default function About(): JSX.Element {
                         src="./images/photo.svg"
                         alt="IT at MISIS"
                     />
-
-                    <div className="about__subtitle">Что мы делаем?</div>
-
-                    <div className="about__subtitleText">тут другое</div>
                 </div>
             </div>
         </section>
