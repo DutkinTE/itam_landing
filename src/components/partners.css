@@ -1,0 +1,208 @@
+@charset "utf-8";
+
+.partners {
+    padding: 60px 200px;
+}
+
+.partners__layout {
+    width: 100%;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 80px;
+}
+
+.partners__header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    align-items: flex-start;
+}
+
+.partners__eyebrowRow {
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.partners__dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 9999px;
+    background: var(--text-secondary);
+}
+
+.partners__eyebrow {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--text-secondary);
+    font-size: 24px;
+    font-family: 'NTSomic', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-weight: 400;
+    line-height: 28.8px;
+    text-transform: uppercase;
+}
+
+.partners__title {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--text-primary);
+    font-size: 48px;
+    font-family: 'NTSomic', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-weight: 400;
+    line-height: 57.6px;
+}
+
+.partners__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 80px;
+}
+
+.partners__leadWrapper {
+    max-width: 1140px;
+}
+
+.partners__lead {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: 32px;
+    font-family: 'NTSomic', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-weight: 400;
+    line-height: 44.8px;
+}
+
+.partners__logosSection {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 64px;
+}
+
+.partners__logosRow {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 64px;
+    overflow: hidden;
+}
+
+.partners__logoBlock {
+    background: var(--icon-secondary);
+}
+
+.partners__logoBlock--w167h45 {
+    width: 167px;
+    height: 45px;
+}
+
+.partners__logoBlock--w114h45 {
+    width: 114px;
+    height: 45px;
+}
+
+.partners__logoBlock--w164h39 {
+    width: 164px;
+    height: 39px;
+}
+
+.partners__logoBlock--w70h39 {
+    width: 70px;
+    height: 39px;
+}
+
+.partners__logoBlock--w272h40 {
+    width: 272px;
+    height: 39.59px;
+}
+
+.partners__logoBlock--w210h45 {
+    width: 210px;
+    height: 45px;
+}
+
+.partners__logoBlock--w110h43 {
+    width: 110px;
+    height: 43px;
+}
+
+.partners__logoBlock--w200h45 {
+    width: 200px;
+    height: 45px;
+}
+
+.partners__logoBlock--w233h45 {
+    width: 233px;
+    height: 45px;
+}
+
+.partners__logoBlock--w176h19 {
+    width: 176px;
+    height: 19px;
+}
+
+.partners__logoImage--w161h27 {
+    width: 161px;
+    height: 27px;
+}
+
+.partners__logoImage--w126h39 {
+    width: 126px;
+    height: 39px;
+}
+
+.partners__statsRow {
+    width: 639px;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.partners__statCard {
+    padding-left: 32px;
+    padding-right: 32px;
+    border-radius: 20px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 16px;
+}
+
+.partners__statNumber {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--text-primary);
+    font-size: 32px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-weight: 700;
+    line-height: 38.4px;
+}
+
+.partners__statText {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--text-secondary);
+    font-size: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-weight: 500;
+    line-height: 26px;
+}
+
+.partners__statsDivider {
+    width: 1px;
+    height: 80px;
+    align-self: stretch;
+    background-color: #505050;
+}

@@ -68,6 +68,40 @@ export default function About(): JSX.Element {
                         src="./images/photo.svg"
                         alt="IT at MISIS"
                     />
+                    <div className="about__what">
+                        <div className="about__subtitle">Что мы делаем?</div>
+                        <div className="about__whatRow">
+                            <div className="about__whatCard">
+                                <div className="about__whatTitle">Митапы</div>
+                                <div className="about__whatText">
+                                    Подписчиков на всех площадках суммарно
+                                    <br />
+                                    (Telegram, VK, Youtube)
+                                </div>
+                            </div>
+                            <div className="about__whatCard">
+                                <div className="about__whatTitle">Курсы</div>
+                                <div className="about__whatText">
+                                    Подписчиков на всех площадках суммарно
+                                    <br />
+                                    (Telegram, VK, Youtube)
+                                </div>
+                            </div>
+                            <div className="about__whatCard">
+                                <div className="about__whatTitle">Фестивали</div>
+                                <div className="about__whatText">Создаем полноценные</div>
+                            </div>
+                            <div className="about__whatCard">
+                                <div className="about__whatTitle">Хакатоны</div>
+                                <div className="about__whatText">
+                                    Подписчиков на всех площадках суммарно
+                                    <br />
+                                    (Telegram, VK, Youtube)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>

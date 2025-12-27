@@ -45,7 +45,7 @@ export default function Projects(): JSX.Element {
                             ПРОЕКТЫ
                         </div>
                         <div className="projects__subtitle">
-                            Что мы делаем?
+                            Наши продукты
                         </div>
                     </div>
                     <div className="projects__button">
