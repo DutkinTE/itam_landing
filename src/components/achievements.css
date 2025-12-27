@@ -198,7 +198,7 @@
 }
 
 .achievements__more {
-    width: 100%;
+    margin-inline: auto;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -211,6 +211,7 @@
     gap: 10px;
     padding-bottom: 10px;
     border-bottom: 1px solid var(--white-400);
+    transition: all 0.3s ease;
 }
 
 .achievements__moreLabel {
@@ -222,10 +223,33 @@
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     font-weight: normal;
     line-height: 28.8px;
+    transition: all 0.3s ease;
 }
 
 .achievements__moreSquare {
-    width: 15px;
-    height: 15px;
-    background: var(--white-400);
+    width: 20px;
+    height: 20px;
+}
+
+.achievements__moreIcon {
+    width: 20px;
+    height: 20px;
+    fill: var(--white-400);
+    transform: rotate(-45deg);
+    transition: all 0.3s ease;
+}
+
+.achievements__more:hover .achievements__moreIcon {
+    fill: var(--white-main);
+    transform: rotate(0deg);
+}
+
+.achievements__more:hover .achievements__moreLabel {
+    cursor: pointer;
+    color: var(--white-main);
+}
+
+.achievements__more:hover .achievements__moreRow {
+    cursor: pointer;
+    border-bottom: 1px solid var(--white-main);
 }
