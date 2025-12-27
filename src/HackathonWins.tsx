@@ -236,7 +236,7 @@ const hackResults: HackResult[] = [
         place: "2 место",
     },
     {
-        event: "Цифровая Эра Транспорта",
+        event: "Цифровая Эра Транспорта2",
         team: "MISIS X6Retail",
         place: "1 место",
     },
@@ -337,7 +337,6 @@ export default function HackathonWins(): JSX.Element {
                                     Место
                                 </div>
                             </div>
-                            <div className="wins__divider wins__divider--strong container" />
 
                             <div className="wins__rows">
                                 {hackResults.map((item) => (
