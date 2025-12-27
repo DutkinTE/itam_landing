@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 .projectsPage {
-    padding: 120px 0 80px;
+    padding: 192px 0 80px;
 }
 
 .projectsPage__container {
@@ -44,6 +44,14 @@
     font-weight: 400;
     line-height: 20.8px;
     cursor: pointer;
+}
+
+.projectsPage__filter:hover {
+    background: var(--controls-buttons-ghost-hover);
+}
+
+.projectsPage__filter:active {
+    background: var(--controls-buttons-ghost-press);
 }
 
 .projectsPage__filter--active {
@@ -127,10 +135,10 @@
     cursor: pointer;
 }
 
-.projectsPage__iconDot {
+.achievements__Icon {
     width: 20px;
     height: 20px;
-    border-radius: 4px;
-    background: var(--icon-secondary);
+    fill: var(--white-400);
+    transform: rotate(-45deg);
+    transition: all 0.3s ease;
 }
-
