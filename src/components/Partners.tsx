@@ -3,7 +3,7 @@ import "./partners.css";
 
 export default function Partners(): JSX.Element {
     return (
-        <section className="partners">
+        <section className="partners container">
             <div className="partners__layout">
                 <header className="partners__header">
                     <div className="partners__eyebrowRow">

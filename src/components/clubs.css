@@ -1,0 +1,110 @@
+@charset "utf-8";
+
+.clubs {
+    padding: 60px 0px;
+
+}
+
+.clubs__layout {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 80px;
+}
+
+.clubs__header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    align-items: flex-start;
+}
+
+.clubs__eyebrowRow {
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.clubs__dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 9999px;
+    background: var(--text-secondary);
+}
+
+.clubs__eyebrow {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--text-secondary);
+    font-size: 24px;
+    font-family: 'NTSomic', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-weight: 400;
+    line-height: 28.8px;
+    text-transform: uppercase;
+}
+
+.clubs__title {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--text-primary);
+    font-size: 48px;
+    font-family: 'NTSomic', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-weight: 400;
+    line-height: 57.6px;
+}
+
+.clubs__listWrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.clubs__list {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.clubs__item {
+    display: inline-flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.clubs__itemLabel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--white-400);
+    font-size: 48px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-weight: 600;
+    line-height: 57.6px;
+    transition: all 0.3s ease;
+}
+
+.clubs__itemLabel:hover {
+    color: var(--text-primary);
+    cursor: pointer;
+}
+
+.clubs__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.clubs__img {
+    width: 586px;
+    height: 586px;
+    object-fit: cover;
+}

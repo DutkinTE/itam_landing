@@ -5,6 +5,7 @@ import Projects from './components/Projects'
 import About from './components/About'
 import Achievements from './components/Achievements'
 import Partners from './components/Partners'
+import Clubs from './components/clubs'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
 
         <About />
         <Projects />
+        <Clubs />
         <Achievements />
         <Partners />
       </main>

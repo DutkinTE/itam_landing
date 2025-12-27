@@ -4,7 +4,7 @@ import "./about.css";
 export default function About(): JSX.Element {
 
     return (
-        <section className="about">
+        <section className="about container">
             <div className="about__layout">
                 <div className="about__header">
                     <div className="about__eyebrowRow">

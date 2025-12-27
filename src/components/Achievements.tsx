@@ -4,7 +4,7 @@ import "./achievements.css";
 export default function Achievements(): JSX.Element {
 
     return (
-        <section className="achievements">
+        <section className="achievements container">
             <div className="achievements__layout">
                 <header className="achievements__header">
                     <div className="achievements__eyebrowRow">
