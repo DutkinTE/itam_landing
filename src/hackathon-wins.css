@@ -111,21 +111,12 @@
 .wins__rowGroup {
     position: relative;
     overflow: hidden;
-    transition: color 0.3s ease-out;
+    transition: all 0.2s ease;
 }
 
-.wins__rowGroup::before {
-    content: "";
-    position: absolute;
-    inset: 0;
+.wins__rowGroup:hover {
+
     background: var(--brand-alt-main);
-    transform-origin: center;
-    transform: scaleY(0);
-    transition: transform 0.2s ease-out;
-}
-
-.wins__rowGroup:hover::before {
-    transform: scaleY(1);
 }
 
 .wins__rowGroup:hover .wins__cell {
