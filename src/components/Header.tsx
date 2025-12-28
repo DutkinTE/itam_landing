@@ -12,6 +12,18 @@ export default function Header(): JSX.Element {
         setIsActive(false);
     };
 
+    const pathname = window.location.pathname;
+
+    const isHomePage =
+        pathname === "/" ||
+        pathname === "" ||
+        pathname === "/index.html";
+
+    const isProjectsPage = pathname.includes("/projects");
+    const isAchievementsPage = pathname.includes("/wins");
+    const isMediaPage = pathname.includes("/media");
+    const isTeamPage = pathname.includes("/team");
+
     return (
         <header className="header">
             <div className={isActive ? "header__active" : "header__disabled"}>
@@ -36,7 +48,7 @@ export default function Header(): JSX.Element {
 
                 <div className="header__menuPanel">
                     <div className="header__menuColumn header__menuColumn--main">
-                        <div className="header__menuItem header__menuItem--active">
+                        <div className={`header__menuItem ${isHomePage ? "header__menuItem--active" : ""}`}>
                             <div className="header__menuItemDot" />
                             <a
                                 className="header__menuItemLabel"
@@ -47,7 +59,7 @@ export default function Header(): JSX.Element {
                             </a>
                         </div>
 
-                        <div className="header__menuItem">
+                        <div className={`header__menuItem ${isProjectsPage ? "header__menuItem--active" : ""}`}>
                             <div className="header__menuItemDot" />
                             <a
                                 className="header__menuItemLabel"
@@ -58,7 +70,7 @@ export default function Header(): JSX.Element {
                             </a>
                         </div>
 
-                        <div className="header__menuItem">
+                        <div className={`header__menuItem ${isAchievementsPage ? "header__menuItem--active" : ""}`}>
                             <div className="header__menuItemDot" />
                             <a
                                 className="header__menuItemLabel"
@@ -69,7 +81,7 @@ export default function Header(): JSX.Element {
                             </a>
                         </div>
 
-                        <div className="header__menuItem">
+                        <div className={`header__menuItem ${isMediaPage ? "header__menuItem--active" : ""}`}>
                             <div className="header__menuItemDot" />
                             <a
                                 className="header__menuItemLabel"
@@ -80,7 +92,7 @@ export default function Header(): JSX.Element {
                             </a>
                         </div>
 
-                        <div className="header__menuItem">
+                        <div className={`header__menuItem ${isTeamPage ? "header__menuItem--active" : ""}`}>
                             <div className="header__menuItemDot" />
                             <a
                                 className="header__menuItemLabel"
