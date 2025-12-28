@@ -20,8 +20,7 @@
     top: 0;
     right: 25%;
     width: 50%;
-    height: 100%;
-    object-fit: cover;
+    height: 90%;
     object-position: center;
     pointer-events: none;
     z-index: 1;
