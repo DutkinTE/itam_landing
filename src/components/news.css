@@ -162,6 +162,7 @@
     transition: all 0.2s ease;
     display: flex;
     align-items: center;
+    text-decoration: none;
 }
 
 .news__readMoreIcon {
@@ -187,4 +188,68 @@
 
 .news__readMore:active .news__readMoreIcon {
     color: var(--text-brand);
+}
+
+.news__more {
+    margin-top: 32px;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    text-decoration: none;
+}
+
+.news__moreRow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--white-400);
+    transition: all 0.3s ease;
+}
+
+.news__moreLabel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--white-400);
+    font-size: 24px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-weight: normal;
+    line-height: 28.8px;
+    transition: all 0.3s ease;
+}
+
+.news__moreSquare {
+    width: 20px;
+    height: 20px;
+}
+
+.news__moreIcon {
+    width: 20px;
+    height: 20px;
+    fill: var(--white-400);
+    transform: rotate(-45deg);
+    transition: all 0.3s ease;
+}
+
+.news__moreLine {
+    width: 0;
+    height: 0;
+}
+
+.news__more:hover .news__moreIcon {
+    fill: var(--white-main);
+    transform: rotate(0deg);
+}
+
+.news__more:hover .news__moreLabel {
+    cursor: pointer;
+    color: var(--white-main);
+}
+
+.news__more:hover .news__moreRow {
+    cursor: pointer;
+    border-bottom: 1px solid var(--white-main);
 }
