@@ -78,6 +78,7 @@
     transition: all 0.2s ease;
     display: flex;
     align-items: center;
+    text-decoration: none;
 }
 
 .team__moreIcon {

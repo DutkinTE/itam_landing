@@ -5,6 +5,7 @@ import App from './App.tsx'
 import HackathonWins from './HackathonWins.tsx'
 import ProjectsPage from './ProjectsPage.tsx'
 import MediaPage from './MediaPage.tsx'
+import TeamPage from './TeamPage.tsx'
 
 const pathname = window.location.pathname
 
@@ -23,6 +24,11 @@ const isMediaPage =
   pathname.endsWith('/media') ||
   pathname.includes('/media/')
 
+const isTeamPage =
+  pathname === '/team' ||
+  pathname.endsWith('/team') ||
+  pathname.includes('/team/')
+
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     {isHackathonWinsPage ? (
@@ -31,6 +37,8 @@ createRoot(document.getElementById('root')!).render(
       <ProjectsPage />
     ) : isMediaPage ? (
       <MediaPage />
+    ) : isTeamPage ? (
+      <TeamPage />
     ) : (
       <App />
     )}

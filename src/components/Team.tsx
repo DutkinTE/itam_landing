@@ -90,7 +90,7 @@ export default function Team(): JSX.Element {
                         <h2 className="team__title">Наше сообщество</h2>
                     </header>
 
-                    <div className="team__moreButton">
+                    <a className="team__moreButton" href="/team">
                         <span className="team__moreLabel">Подробнее</span>
                         <svg
                             className="team__moreIcon"
@@ -104,7 +104,7 @@ export default function Team(): JSX.Element {
                                 d="M14.5355 3.92909L13.1213 5.3433L17.7812 10.0031H1.39042V11.9972H17.7812L13.1213 16.657L14.5355 18.0712L21.6066 11.0002L14.5355 3.92909Z"
                             />
                         </svg>
-                    </div>
+                    </a>
                 </div>
 
             </div>
