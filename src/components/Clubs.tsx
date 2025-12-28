@@ -13,7 +13,7 @@ export default function Clubs(): JSX.Element {
     ];
 
     return (
-        <section className="clubs">
+        <section className="clubs" id="clubs">
             <div className="container clubs__container">
                 <div className="clubs__layout">
                     <header className="clubs__header">
@@ -26,16 +26,36 @@ export default function Clubs(): JSX.Element {
 
                     <div className="clubs__listWrapper">
                         <div className="clubs__list">
-                            {clubsList.map((name) => (
-                                <div className="clubs__item" key={name}>
-                                    <img
-                                        className="clubs__iconArrowRight"
-                                        src="./images/Union.svg"
-                                        alt="logo arrow right"
-                                    />
-                                    <div className="clubs__itemLabel">{name}</div>
-                                </div>
-                            ))}
+                            {clubsList.map((name) => {
+                                const content = (
+                                    <>
+                                        <img
+                                            className="clubs__iconArrowRight"
+                                            src="./images/Union.svg"
+                                            alt=""
+                                        />
+                                        <div className="clubs__itemLabel">{name}</div>
+                                    </>
+                                );
+
+                                if (name === "Хакатон клуб") {
+                                    return (
+                                        <a
+                                            className="clubs__item"
+                                            href="/club/hackathon"
+                                            key={name}
+                                        >
+                                            {content}
+                                        </a>
+                                    );
+                                }
+
+                                return (
+                                    <div className="clubs__item" key={name}>
+                                        {content}
+                                    </div>
+                                );
+                            })}
                         </div>
                     </div>
                 </div>

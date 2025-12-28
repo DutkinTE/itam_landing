@@ -79,6 +79,8 @@
     display: inline-flex;
     align-items: center;
     width: 100%;
+    text-decoration: none;
+    color: inherit;
 }
 
 .clubs__iconArrowRight {

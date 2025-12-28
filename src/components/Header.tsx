@@ -8,12 +8,18 @@ export default function Header(): JSX.Element {
         setIsActive((prev) => !prev);
     };
 
+    const handleCloseMenu = (): void => {
+        setIsActive(false);
+    };
+
     return (
         <header className="header">
             <div className={isActive ? "header__active" : "header__disabled"}>
-                <div className="container header__inner">
+                        <div className="container header__inner">
                     <div className="brand">
-                        <a href="/"><img src="./images/Logo.svg" alt="Логотип IT at MISIS" className="brand__mark" /></a>
+                        <a href="/" onClick={handleCloseMenu}>
+                            <img src="./images/Logo.svg" alt="Логотип IT at MISIS" className="brand__mark" />
+                        </a>
                     </div>
                     <button
                         type="button"
@@ -32,32 +38,68 @@ export default function Header(): JSX.Element {
                     <div className="header__menuColumn header__menuColumn--main">
                         <div className="header__menuItem header__menuItem--active">
                             <div className="header__menuItemDot" />
-                            <a className="header__menuItemLabel" href="#highest-point">Главная</a>
+                            <a
+                                className="header__menuItemLabel"
+                                href="/#highest-point"
+                                onClick={handleCloseMenu}
+                            >
+                                Главная
+                            </a>
                         </div>
 
                         <div className="header__menuItem">
                             <div className="header__menuItemDot" />
-                            <a className="header__menuItemLabel">Проекты</a>
+                            <a
+                                className="header__menuItemLabel"
+                                href="/projects"
+                                onClick={handleCloseMenu}
+                            >
+                                Проекты
+                            </a>
                         </div>
 
                         <div className="header__menuItem">
                             <div className="header__menuItemDot" />
-                            <a className="header__menuItemLabel">Достижения</a>
+                            <a
+                                className="header__menuItemLabel"
+                                href="/wins"
+                                onClick={handleCloseMenu}
+                            >
+                                Достижения
+                            </a>
                         </div>
 
                         <div className="header__menuItem">
                             <div className="header__menuItemDot" />
-                            <a className="header__menuItemLabel">Упоминания в СМИ</a>
+                            <a
+                                className="header__menuItemLabel"
+                                href="/media"
+                                onClick={handleCloseMenu}
+                            >
+                                Упоминания в СМИ
+                            </a>
                         </div>
 
                         <div className="header__menuItem">
                             <div className="header__menuItemDot" />
-                            <a className="header__menuItemLabel">Команда</a>
+                            <a
+                                className="header__menuItemLabel"
+                                href="/team"
+                                onClick={handleCloseMenu}
+                            >
+                                Команда
+                            </a>
                         </div>
 
                         <div className="header__menuItem">
                             <div className="header__menuItemDot" />
-                            <a className="header__menuItemLabel">Блог</a>
+                            <a
+                                className="header__menuItemLabel"
+                                href="/"
+                                onClick={handleCloseMenu}
+                            >
+                                Блог
+                            </a>
                         </div>
                     </div>
 
@@ -66,31 +108,73 @@ export default function Header(): JSX.Element {
 
                         <div className="header__submenuItem">
                             <div className="header__submenuDot" />
-                            <div className="header__submenuLabel">Хакатон</div>
+                            <a
+                                className="header__submenuLabel"
+                                href="/club/hackathon"
+                                onClick={handleCloseMenu}
+                            >
+                                Хакатон
+                            </a>
                         </div>
                         <div className="header__submenuItem">
                             <div className="header__submenuDot" />
-                            <div className="header__submenuLabel">Дизайн</div>
+                            <a
+                                className="header__submenuLabel"
+                                href="/#clubs"
+                                onClick={handleCloseMenu}
+                            >
+                                Дизайн
+                            </a>
                         </div>
                         <div className="header__submenuItem">
                             <div className="header__submenuDot" />
-                            <div className="header__submenuLabel">AI-knowledge</div>
+                            <a
+                                className="header__submenuLabel"
+                                href="/#clubs"
+                                onClick={handleCloseMenu}
+                            >
+                                AI-knowledge
+                            </a>
                         </div>
                         <div className="header__submenuItem">
                             <div className="header__submenuDot" />
-                            <div className="header__submenuLabel">Геймдев</div>
+                            <a
+                                className="header__submenuLabel"
+                                href="/#clubs"
+                                onClick={handleCloseMenu}
+                            >
+                                Геймдев
+                            </a>
                         </div>
                         <div className="header__submenuItem">
                             <div className="header__submenuDot" />
-                            <div className="header__submenuLabel">Робо</div>
+                            <a
+                                className="header__submenuLabel"
+                                href="/#clubs"
+                                onClick={handleCloseMenu}
+                            >
+                                Робо
+                            </a>
                         </div>
                         <div className="header__submenuItem">
                             <div className="header__submenuDot" />
-                            <div className="header__submenuLabel">ACM</div>
+                            <a
+                                className="header__submenuLabel"
+                                href="/#clubs"
+                                onClick={handleCloseMenu}
+                            >
+                                ACM
+                            </a>
                         </div>
                         <div className="header__submenuItem">
                             <div className="header__submenuDot" />
-                            <div className="header__submenuLabel">CTF</div>
+                            <a
+                                className="header__submenuLabel"
+                                href="/#clubs"
+                                onClick={handleCloseMenu}
+                            >
+                                CTF
+                            </a>
                         </div>
                     </div>
                 </div>
