@@ -15,6 +15,18 @@
     opacity: .55;
 }
 
+.hero__video {
+    position: absolute;
+    top: 0;
+    right: 25%;
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    pointer-events: none;
+    z-index: 1;
+}
+
 .hero__layout {
     position: relative;
     height: 761px;

@@ -27,10 +27,10 @@ export default function Header(): JSX.Element {
     return (
         <header className="header">
             <div className={isActive ? "header__active" : "header__disabled"}>
-                        <div className="container header__inner">
+                <div className="container header__inner">
                     <div className="brand">
                         <a href="/" onClick={handleCloseMenu}>
-                            <img src="./images/Logo.svg" alt="Логотип IT at MISIS" className="brand__mark" />
+                            <img src="/images/Logo.svg" alt="Логотип IT at MISIS" className="brand__mark" />
                         </a>
                     </div>
                     <button
