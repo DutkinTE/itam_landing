@@ -56,12 +56,12 @@ body {
 
 ::selection {
   background: var(--brand-alt-main);
-  color: var(--text-primary-inverse);
+  color: var(--text-primary);
 }
 
 ::-moz-selection {
   background: var(--brand-alt-main);
-  color: var(--text-primary-inverse);
+  color: var(--text-primary);
 }
 
 .container {
