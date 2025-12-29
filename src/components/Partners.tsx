@@ -23,6 +23,19 @@ export default function Partners(): JSX.Element {
                     </div>
 
                     <div className="partners__logosSection">
+                        <div className="partners__statsRow">
+                            <div className="partners__statCard">
+                                <div className="partners__statNumber">20+</div>
+                                <div className="partners__statText">Компаний-партнеров</div>
+                            </div>
+
+                            <div className="partners__statsDivider" />
+
+                            <div className="partners__statCard">
+                                <div className="partners__statNumber">10+</div>
+                                <div className="partners__statText">Совместных проектов</div>
+                            </div>
+                        </div>
                         <div className="partners__logosViewport" aria-hidden="true">
                             <div className="partners__logosRow partners__logosRow--marquee">
                                 <img className="partners__logoImage" src="/images/Vector-2.svg" alt="Логотип партнёра" />
@@ -54,19 +67,7 @@ export default function Partners(): JSX.Element {
                             </div>
                         </div>
 
-                        <div className="partners__statsRow">
-                            <div className="partners__statCard">
-                                <div className="partners__statNumber">20+</div>
-                                <div className="partners__statText">Компаний-партнеров</div>
-                            </div>
 
-                            <div className="partners__statsDivider" />
-
-                            <div className="partners__statCard">
-                                <div className="partners__statNumber">10+</div>
-                                <div className="partners__statText">Совместных проектов</div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>

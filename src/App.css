@@ -19,7 +19,7 @@
 main {
   display: flex;
   flex-direction: column;
-  gap: 256px;
+  gap: 160px;
 }
 
 @keyframes page-noise-move {

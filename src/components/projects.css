@@ -156,3 +156,30 @@
 .projects__card--next {
     opacity: 0.5;
 }
+
+@media (max-width: 1280px) {
+    .projects {
+        padding: 48px 0;
+        height: 760px;
+    }
+
+    .projects__inner {
+        margin-bottom: 60px;
+    }
+
+    .projects__subtitle {
+        font-size: 40px;
+    }
+
+    .projects__carousel {
+        height: 520px;
+    }
+
+    .projects__card {
+        flex: 0 0 880px;
+    }
+
+    .projects__card--current {
+        flex-basis: 760px;
+    }
+}

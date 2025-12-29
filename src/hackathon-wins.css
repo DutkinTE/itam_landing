@@ -54,6 +54,12 @@
     color: var(--text-primary-inverse);
 }
 
+.wins__filter--active:hover {
+    background: var(--white-main);
+    color: var(--text-primary-inverse);
+
+}
+
 .wins__table {
     display: flex;
     flex-direction: column;
@@ -117,7 +123,7 @@
 .wins__rowGroup:hover {
 
     background: var(--brand-alt-main);
-    
+
     transition: all 0.2s ease;
 }
 

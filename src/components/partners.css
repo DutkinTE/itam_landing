@@ -171,3 +171,59 @@
     align-self: stretch;
     background-color: #505050;
 }
+
+@media (max-width: 1280px) {
+    .partners {
+        padding: 48px 0;
+    }
+
+    .partners__layout {
+        gap: 60px;
+    }
+
+    .partners__title {
+        font-size: 40px;
+        line-height: 48px;
+    }
+
+    .partners__content {
+        gap: 60px;
+    }
+
+    .partners__lead {
+        font-size: 28px;
+        line-height: 38px;
+    }
+
+    .partners__logosSection {
+        gap: 40px;
+    }
+
+    .partners__logosRow {
+        gap: 40px;
+    }
+
+    .partners__statsRow {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .partners__statCard {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .partners__statNumber {
+        font-size: 28px;
+        line-height: 34px;
+    }
+
+    .partners__statText {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .partners__statsDivider {
+        height: 72px;
+    }
+}
