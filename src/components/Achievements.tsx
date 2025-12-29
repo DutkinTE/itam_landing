@@ -75,7 +75,6 @@ export default function Achievements(): JSX.Element {
     }, []);
 
     const latestWins = useMemo(() => wins.slice(0, 10), [wins]);
-    const latestYear = latestWins[0]?.year;
 
     return (
         <section className="achievements ">
