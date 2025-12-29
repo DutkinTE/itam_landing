@@ -43,7 +43,7 @@ export default function Projects(): JSX.Element {
                 <div className="projects__inner">
                     <div className="projects_header">
                         <div className="projects__title">
-                            ПРОЕКТЫ
+                            Проекты
                         </div>
                         <div className="projects__subtitle">
                             Наши продукты

@@ -9,7 +9,7 @@ export default function About(): JSX.Element {
                 <div className="about__header">
                     <div className="about__eyebrowRow">
                         <div className="about__dot" />
-                        <div className="about__eyebrow">О НАС</div>
+                        <div className="about__eyebrow">О нас</div>
                     </div>
                     <h2 className="about__title">Кто мы такие?</h2>
                 </div>
@@ -28,7 +28,7 @@ export default function About(): JSX.Element {
                             <div className="about__statNumber">5.500+</div>
                             <div className="about__statText">
                                 Подписчиков на всех площадках суммарно
-                                <br />
+                                < br />
                                 (Telegram, VK, Youtube)
                             </div>
                         </div>

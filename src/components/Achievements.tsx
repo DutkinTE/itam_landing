@@ -132,8 +132,7 @@ export default function Achievements(): JSX.Element {
                     <div className="achievements__list">
                         <div className="achievements__listHeader container">
                             <h3 className="achievements__listTitle">
-                                Последние 10 затащенных хакатонов
-                                {latestYear ? ` ${latestYear}` : ""}:
+                                Последние победы на хакатонах:
                             </h3>
                         </div>
 
