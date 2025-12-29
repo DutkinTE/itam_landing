@@ -147,7 +147,7 @@
     justify-content: center;
     color: var(--text-primary);
     font-size: 32px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: 'NTSomic', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     font-weight: 700;
     line-height: 38.4px;
 }
@@ -159,7 +159,7 @@
     justify-content: center;
     color: var(--text-secondary);
     font-size: 20px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: 'NTSomic', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     font-weight: 500;
     line-height: 26px;
 }
