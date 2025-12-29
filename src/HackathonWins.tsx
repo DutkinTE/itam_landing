@@ -10,6 +10,7 @@ type HackResult = {
     place: string;
     year: number;
     awardDate: string;
+    link?: string;
 };
 
 const YEARS = ["Все", "2026", "2025", "2024", "2023"] as const;
@@ -31,6 +32,7 @@ export default function HackathonWins(): JSX.Element {
                         const awardDateRaw = String(row["Дата награждения"] ?? "").trim();
                         const yearRaw = String(row["Год"] ?? "").trim();
                         const year = Number(yearRaw.replace(/[^\d]/g, ""));
+                        const linkRaw = String(row["Ссылка"] ?? "").trim();
 
                         return {
                             event: String(row["Название хакатона"] ?? "").trim(),
@@ -38,6 +40,7 @@ export default function HackathonWins(): JSX.Element {
                             place: String(row["Результат"] ?? "").trim(),
                             year,
                             awardDate: awardDateRaw,
+                            link: linkRaw || undefined,
                         } satisfies HackResult;
                     })
                     .filter(
@@ -119,8 +122,20 @@ export default function HackathonWins(): JSX.Element {
                             </div>
 
                             <div className="wins__rows">
-                                {filteredData.map((item, idx) => (
-                                    <div key={idx} className="wins__rowGroup">
+                                {filteredData.map((item, idx) => {
+                                    const isClickable = Boolean(item.link);
+                                    const handleClick = () => {
+                                        if (!item.link) return;
+                                        window.open(item.link, "_blank");
+                                    };
+
+                                    return (
+                                        <div
+                                            key={idx}
+                                            className={`wins__rowGroup${isClickable ? " wins__rowGroup--clickable" : ""
+                                                }`}
+                                            onClick={isClickable ? handleClick : undefined}
+                                        >
                                         <div className="wins__row container">
                                             <div className="wins__cell wins__cell--event">
                                                 {item.event}
@@ -132,8 +147,9 @@ export default function HackathonWins(): JSX.Element {
                                                 {item.place}
                                             </div>
                                         </div>
-                                    </div>
-                                ))}
+                                        </div>
+                                    );
+                                })}
 
                                 {filteredData.length === 0 && (
                                     <div className="wins__empty container">

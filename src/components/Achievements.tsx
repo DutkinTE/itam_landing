@@ -1,12 +1,86 @@
-import { type JSX } from "react";
+import { Fragment, type JSX, useEffect, useMemo, useState } from "react";
+import Papa from "papaparse";
 import "./achievements.css";
+
+type HackResult = {
+    event: string;
+    team: string;
+    place: string;
+    year: number;
+    awardDate: string;
+    link?: string;
+};
 
 export default function Achievements(): JSX.Element {
 
+    const [wins, setWins] = useState<HackResult[]>([]);
+
+    useEffect(() => {
+        Papa.parse("/Wins.csv", {
+            download: true,
+            header: true,
+            skipEmptyLines: true,
+            delimiter: ";",
+            transformHeader: (header: string) => header.replace(/^\uFEFF/, "").trim(),
+            complete: (result) => {
+                const parsed: HackResult[] = (result.data as any[])
+                    .map((row) => {
+                        const awardDateRaw = String(row["Дата награждения"] ?? "").trim();
+                        const yearRaw = String(row["Год"] ?? "").trim();
+                        const year = Number(yearRaw.replace(/[^\d]/g, ""));
+                        const linkRaw = String(row["Ссылка"] ?? "").trim();
+
+                        return {
+                            event: String(row["Название хакатона"] ?? "").trim(),
+                            team: String(row["Название команды"] ?? "").trim(),
+                            place: String(row["Результат"] ?? "").trim(),
+                            year,
+                            awardDate: awardDateRaw,
+                            link: linkRaw || undefined,
+                        } satisfies HackResult;
+                    })
+                    .filter(
+                        (item) =>
+                            item.event !== "" &&
+                            item.team !== "" &&
+                            item.place !== "" &&
+                            !Number.isNaN(item.year)
+                    )
+                    .sort((a, b) => {
+                        if (b.year !== a.year) return b.year - a.year;
+
+                        const parseAwardDate = (dateStr: string, year: number) => {
+                            if (!dateStr) return new Date(year, 0, 1).getTime();
+                            const [dayStr, monthStr, yearStr] = dateStr.split(".");
+                            const day = Number(dayStr);
+                            const month = Number(monthStr);
+                            const fullYear = Number(yearStr);
+
+                            if (!day || !month || !fullYear) {
+                                return new Date(year, 0, 1).getTime();
+                            }
+
+                            return new Date(fullYear, month - 1, day).getTime();
+                        };
+
+                        const timeA = parseAwardDate(a.awardDate, a.year);
+                        const timeB = parseAwardDate(b.awardDate, b.year);
+
+                        return timeB - timeA;
+                    });
+
+                setWins(parsed);
+            },
+        });
+    }, []);
+
+    const latestWins = useMemo(() => wins.slice(0, 10), [wins]);
+    const latestYear = latestWins[0]?.year;
+
     return (
-        <section className="achievements container">
+        <section className="achievements ">
             <div className="achievements__layout">
-                <header className="achievements__header">
+                <header className="achievements__header container">
                     <div className="achievements__eyebrowRow">
                         <div className="achievements__dot" />
                         <div className="achievements__eyebrow">Достижения</div>
@@ -14,15 +88,15 @@ export default function Achievements(): JSX.Element {
                     <h2 className="achievements__title">Наши результаты</h2>
                 </header>
 
-                <div className="achievements__content">
-                    <div className="achievements__leadWrapper">
-                        <p className="achievements__lead">
+                <div className="achievements__content ">
+                    <div className="achievements__leadWrapper ">
+                        <p className="achievements__lead container">
                             Участники коммьюнити демонстрируют постоянный профессиональный рост и регулярно
                             добиваются впечатляющих успехов в престижных соревнованиях самого разного профиля
                         </p>
                     </div>
 
-                    <div className="achievements__stats">
+                    <div className="achievements__stats container">
                         <div className="achievements__statCard">
                             <div className="achievements__statNumber">~14 млн</div>
                             <div className="achievements__statText">
@@ -56,154 +130,49 @@ export default function Achievements(): JSX.Element {
                     </div>
 
                     <div className="achievements__list">
-                        <div className="achievements__listHeader">
+                        <div className="achievements__listHeader container">
                             <h3 className="achievements__listTitle">
-                                Последние 10 затащенных хакатонов 2025:
+                                Последние 10 затащенных хакатонов
+                                {latestYear ? ` ${latestYear}` : ""}:
                             </h3>
                         </div>
 
                         <div className="achievements__listTable">
-                            <div className="achievements__listSeparator" />
+                            <div className="achievements__listSeparator " />
 
-                            <div className="achievements__listRow">
-                                <div className="achievements__listCell achievements__listCell--event">
-                                    IT Purple Hack
-                                </div>
-                                <div className="achievements__listCell achievements__listCell--team">
-                                    Т.Ч.К. MISIS
-                                </div>
-                                <div className="achievements__listCell achievements__listCell--place">
-                                    1 место
-                                </div>
-                            </div>
+                            {latestWins.map((item, index) => {
+                                const isClickable = Boolean(item.link);
+                                const handleClick = () => {
+                                    if (!item.link) return;
+                                    window.open(item.link, "_blank");
+                                };
 
-                            <div className="achievements__listSeparator" />
+                                return (
+                                    <Fragment
+                                        key={`${item.event}-${item.team}-${item.place}-${index}`}
+                                    >
+                                        <div
+                                            className={`achievements__listRowContainer ${isClickable ? " achievements__listRowContainer--clickable" : ""
+                                                }`}
+                                            onClick={isClickable ? handleClick : undefined}
+                                        >
+                                            <div className="achievements__listRow container">
+                                                <div className="achievements__listCell achievements__listCell--event">
+                                                    {item.event}
+                                                </div>
+                                                <div className="achievements__listCell achievements__listCell--team">
+                                                    {item.team}
+                                                </div>
+                                                <div className="achievements__listCell achievements__listCell--place">
+                                                    {item.place}
+                                                </div>
+                                            </div>
+                                        </div>
 
-                            <div className="achievements__listRow">
-                                <div className="achievements__listCell achievements__listCell--event">
-                                    IT Purple Hack
-                                </div>
-                                <div className="achievements__listCell achievements__listCell--team">
-                                    Мы мисис 177 бочонок!!!
-                                </div>
-                                <div className="achievements__listCell achievements__listCell--place">
-                                    2 место
-                                </div>
-                            </div>
-
-                            <div className="achievements__listSeparator" />
-
-                            <div className="achievements__listRow">
-                                <div className="achievements__listCell achievements__listCell--event">
-                                    IT Purple Hack
-                                </div>
-                                <div className="achievements__listCell achievements__listCell--team">
-                                    МИСИС Блинчики
-                                </div>
-                                <div className="achievements__listCell achievements__listCell--place">
-                                    3 место
-                                </div>
-                            </div>
-
-                            <div className="achievements__listSeparator" />
-
-                            <div className="achievements__listRow">
-                                <div className="achievements__listCell achievements__listCell--event">
-                                    TenderHack Иркутск
-                                </div>
-                                <div className="achievements__listCell achievements__listCell--team">
-                                    Капитошка МИСИС
-                                </div>
-                                <div className="achievements__listCell achievements__listCell--place">
-                                    2 место
-                                </div>
-                            </div>
-
-                            <div className="achievements__listSeparator" />
-
-                            <div className="achievements__listRow">
-                                <div className="achievements__listCell achievements__listCell--event">
-                                    BEST HACK Москва
-                                </div>
-                                <div className="achievements__listCell achievements__listCell--team">
-                                    YSL MISIS
-                                </div>
-                                <div className="achievements__listCell achievements__listCell--place">
-                                    2 место
-                                </div>
-                            </div>
-
-                            <div className="achievements__listSeparator" />
-
-                            <div className="achievements__listRow">
-                                <div className="achievements__listCell achievements__listCell--event">
-                                    МТС Система Хак: Нижний Новгород
-                                </div>
-                                <div className="achievements__listCell achievements__listCell--team">
-                                    Динозаврики МИСИС
-                                </div>
-                                <div className="achievements__listCell achievements__listCell--place">
-                                    1 место
-                                </div>
-                            </div>
-
-                            <div className="achievements__listSeparator" />
-
-                            <div className="achievements__listRow">
-                                <div className="achievements__listCell achievements__listCell--event">
-                                    МТС Система Хак: Нижний Новгород
-                                </div>
-                                <div className="achievements__listCell achievements__listCell--team">
-                                    14-Bit MISIS
-                                </div>
-                                <div className="achievements__listCell achievements__listCell--place">
-                                    1 место
-                                </div>
-                            </div>
-
-                            <div className="achievements__listSeparator" />
-
-                            <div className="achievements__listRow">
-                                <div className="achievements__listCell achievements__listCell--event">
-                                    МТС Система Хак: Нижний Новгород
-                                </div>
-                                <div className="achievements__listCell achievements__listCell--team">
-                                    14-Bit MISIS
-                                </div>
-                                <div className="achievements__listCell achievements__listCell--place">
-                                    1 место
-                                </div>
-                            </div>
-
-                            <div className="achievements__listSeparator" />
-
-                            <div className="achievements__listRow">
-                                <div className="achievements__listCell achievements__listCell--event">
-                                    МТС Система Хак: Нижний Новгород
-                                </div>
-                                <div className="achievements__listCell achievements__listCell--team">
-                                    14-Bit MISIS
-                                </div>
-                                <div className="achievements__listCell achievements__listCell--place">
-                                    1 место
-                                </div>
-                            </div>
-
-                            <div className="achievements__listSeparator" />
-
-                            <div className="achievements__listRow">
-                                <div className="achievements__listCell achievements__listCell--event">
-                                    МТС Система Хак: Нижний Новгород
-                                </div>
-                                <div className="achievements__listCell achievements__listCell--team">
-                                    14-Bit MISIS
-                                </div>
-                                <div className="achievements__listCell achievements__listCell--place">
-                                    1 место
-                                </div>
-                            </div>
-
-                            <div className="achievements__listSeparator" />
+                                        <div className="achievements__listSeparator" />
+                                    </Fragment>
+                                );
+                            })}
                         </div>
                     </div>
 

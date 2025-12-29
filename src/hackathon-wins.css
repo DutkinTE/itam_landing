@@ -120,6 +120,10 @@
     transition: all 1s ease;
 }
 
+.wins__rowGroup--clickable {
+    cursor: pointer;
+}
+
 .wins__rowGroup:hover {
 
     background: var(--brand-alt-main);
