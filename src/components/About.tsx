@@ -28,7 +28,6 @@ export default function About(): JSX.Element {
                             <div className="about__statNumber">5.500+</div>
                             <div className="about__statText">
                                 Подписчиков на всех площадках суммарно
-                                < br />
                                 (Telegram, VK, Youtube)
                             </div>
                         </div>
@@ -37,9 +36,7 @@ export default function About(): JSX.Element {
                             <div className="about__statNumber">30+</div>
                             <div className="about__statText">
                                 Проектов и внутренних
-                                <br />
                                 мероприятий создано
-                                <br />
                                 коммьюнити
                             </div>
                         </div>
@@ -48,7 +45,6 @@ export default function About(): JSX.Element {
                             <div className="about__statNumber">7</div>
                             <div className="about__statText">
                                 Клубов, объединенных
-                                <br />
                                 в одну платформу
                             </div>
                         </div>
@@ -56,9 +52,7 @@ export default function About(): JSX.Element {
                         <div className="about__statCard">
                             <div className="about__statNumber">22+</div>
                             <div className="about__statText">
-                                Курсов, организованных студентами,
-                                <br />
-                                для студентов
+                                Курсов, организованных студентами
                             </div>
                         </div>
                     </div>

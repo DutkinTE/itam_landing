@@ -1,4 +1,4 @@
-import { type JSX, useState } from "react";
+import { type JSX, useEffect, useState } from "react";
 import "./projects.css";
 import ArrowButton from "./ArrowButton";
 
@@ -34,8 +34,28 @@ export default function Projects(): JSX.Element {
 
     const [activeIndex, setActiveIndex] = useState(0);
 
+    const [isMobile, setIsMobile] = useState(() =>
+        typeof window !== "undefined" && window.matchMedia("(max-width: 768px)").matches
+    );
+
+    useEffect(() => {
+        const mql = window.matchMedia("(max-width: 768px)");
+        const onChange = (e: MediaQueryListEvent): void => setIsMobile(e.matches);
+
+        // Safari < 14
+        if ("addEventListener" in mql) {
+            mql.addEventListener("change", onChange);
+            return () => mql.removeEventListener("change", onChange);
+        } else {
+            (mql as any).addListener(onChange);
+            return () => (mql as any).removeListener(onChange);
+        }
+    }, []);
+
     const currentIndex = activeIndex;
-    const trackTransform = `translateX(calc(50vw - 417px - (1072px * ${currentIndex})))`;
+    const trackTransform = isMobile
+        ? "none"
+        : `translateX(calc(50vw - 417px - (1072px * ${currentIndex})))`;
 
     return (
         <section className="projects" >

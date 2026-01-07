@@ -183,3 +183,29 @@
         flex-basis: 760px;
     }
 }
+
+@media (max-width: 1024px) {
+    .projects {
+        height: 720px;
+    }
+
+    .projects__subtitle {
+        font-size: 36px;
+    }
+
+    .projects__carousel {
+        height: 500px;
+    }
+
+    .projects__track {
+        gap: 40px;
+    }
+
+    .projects__card {
+        flex: 0 0 760px;
+    }
+
+    .projects__card--current {
+        flex-basis: 660px;
+    }
+}
