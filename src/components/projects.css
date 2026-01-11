@@ -189,8 +189,12 @@
         height: 720px;
     }
 
+    .projects__title {
+        font-size: 18px;
+    }
+
     .projects__subtitle {
-        font-size: 36px;
+        font-size: 34px;
     }
 
     .projects__carousel {

@@ -73,6 +73,7 @@
 
 .about__lead {
     margin: 0;
+    width: 80%;
     color: var(--text-secondary);
     font-size: 24px;
     font-family: 'NTSomic', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -237,6 +238,7 @@
     .about__eyebrow {
         font-size: 18px;
     }
+
     .about__statText {
         font-size: 16px;
     }

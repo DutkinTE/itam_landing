@@ -35,7 +35,7 @@ export default function News(): JSX.Element {
                     <header className="news__header">
                         <div className="news__eyebrowRow">
                             <div className="news__dot" />
-                            <div className="news__eyebrow">последние упоминания</div>
+                            <div className="news__eyebrow">Последние упоминания</div>
                         </div>
                         <h2 className="news__title">СМИ о нас</h2>
                     </header>

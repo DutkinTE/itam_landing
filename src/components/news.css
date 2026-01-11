@@ -252,3 +252,62 @@
     cursor: pointer;
     border-bottom: 1px solid var(--white-main);
 }
+
+@media (max-width: 1280px) {
+    .news__title {
+        font-size: 40px;
+    }
+
+    .news__date {
+        font-size: 18px;
+    }
+
+    .news__headline {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .news__row {
+        gap: 32px;
+    }
+
+    .news__moreLabel {
+        font-size: 20px;
+    }
+
+    .news__moreRow {
+        padding-bottom: 5px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .news__eyebrow {
+        font-size: 18px;
+    }
+
+    .news__title {
+        font-size: 34px;
+    }
+
+    .news__date {
+        font-size: 16px;
+    }
+
+    .news__headline {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    .news__image {
+        width: 100%;
+        height: auto;
+    }
+
+    .news__content {
+        gap: 24px;
+    }
+
+    .news__moreLabel {
+        font-size: 18px;
+    }
+}
