@@ -135,10 +135,44 @@
     cursor: pointer;
 }
 
-.achievements__Icon {
+.projectsPage__Icon {
     width: 20px;
     height: 20px;
     fill: var(--white-400);
     transform: rotate(-45deg);
     transition: all 0.3s ease;
+}
+
+@media (max-width: 1280px) {
+    .projectsPage__title {
+        font-size: 72px;
+        line-height: 79.2px;
+    }
+
+    .projectsPage__hero {
+        gap: 20px;
+    }
+
+    .projectsPage__cardTitle {
+        font-size: 28px;
+        line-height: 30.8px;
+    }
+
+    .projectsPage__image {
+        height: 307px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .projectsPage__image {
+        height: 240px;
+    }
+
+    .projectsPage__title {
+        font-size: 62px;
+    }
+
+    .projectsPage__cardTitle {
+        font-size: 24px;
+    }
 }

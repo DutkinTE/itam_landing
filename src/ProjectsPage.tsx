@@ -117,7 +117,7 @@ export default function ProjectsPage(): JSX.Element {
 
                                         <ArrowButton
                                             className="projectsPage__iconButton"
-                                            iconClassName="achievements__Icon"
+                                            iconClassName="projectsPage__Icon"
                                             label=""
                                             aria-label="Открыть проект"
                                         />

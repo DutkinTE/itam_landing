@@ -109,17 +109,20 @@ export default function HackathonWins(): JSX.Element {
                         </header>
 
                         <div className="wins__table">
-                            <div className="wins__tableHeader container">
-                                <div className="wins__headerCell wins__headerCell--event">
-                                    Название хакатона
-                                </div>
-                                <div className="wins__headerCell wins__headerCell--team">
-                                    Название команды
-                                </div>
-                                <div className="wins__headerCell wins__headerCell--place">
-                                    Место
+                            <div className="container">
+                                <div className="wins__tableHeader">
+                                    <div className="wins__headerCell wins__headerCell--event">
+                                        Название хакатона
+                                    </div>
+                                    <div className="wins__headerCell wins__headerCell--team">
+                                        Название команды
+                                    </div>
+                                    <div className="wins__headerCell wins__headerCell--place">
+                                        Место
+                                    </div>
                                 </div>
                             </div>
+
 
                             <div className="wins__rows">
                                 {filteredData.map((item, idx) => {
@@ -136,17 +139,17 @@ export default function HackathonWins(): JSX.Element {
                                                 }`}
                                             onClick={isClickable ? handleClick : undefined}
                                         >
-                                        <div className="wins__row container">
-                                            <div className="wins__cell wins__cell--event">
-                                                {item.event}
+                                            <div className="wins__row container">
+                                                <div className="wins__cell wins__cell--event">
+                                                    {item.event}
+                                                </div>
+                                                <div className="wins__cell wins__cell--team">
+                                                    {item.team}
+                                                </div>
+                                                <div className="wins__cell wins__cell--place">
+                                                    {item.place}
+                                                </div>
                                             </div>
-                                            <div className="wins__cell wins__cell--team">
-                                                {item.team}
-                                            </div>
-                                            <div className="wins__cell wins__cell--place">
-                                                {item.place}
-                                            </div>
-                                        </div>
                                         </div>
                                     );
                                 })}

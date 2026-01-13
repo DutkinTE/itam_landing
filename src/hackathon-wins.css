@@ -1,5 +1,3 @@
-@charset "utf-8";
-
 .wins {
     padding: 196px 0 80px;
 }
@@ -57,22 +55,19 @@
 .wins__filter--active:hover {
     background: var(--white-main);
     color: var(--text-primary-inverse);
-
 }
 
 .wins__table {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+    width: 100%;
 }
 
 .wins__tableHeader {
-    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-bottom: 16px;
     border-bottom: 1px solid var(--text-primary);
+    margin-bottom: 24px;
 }
 
 .wins__headerCell {
@@ -106,8 +101,8 @@
 }
 
 .wins__row {
-    padding: 16px 0;
-    width: 100%;
+    padding-top: 16px;
+    padding-bottom: 16px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -159,4 +154,38 @@
     width: 90px;
     color: var(--text-primary);
     text-align: right;
+}
+
+@media (max-width: 1280px) {
+    .wins__title {
+        font-size: 72px;
+        line-height: 79.2px;
+    }
+
+    .wins__headerCell {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .wins__cell {
+        font-size: 20px;
+        line-height: 24px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .wins__title {
+        font-size: 62px;
+        line-height: 68.4px;
+    }
+
+    .wins__headerCell {
+        font-size: 18px;
+        line-height: 21.6px;
+    }
+
+    .wins__cell {
+        font-size: 18px;
+        line-height: 21.6px;
+    }
 }
