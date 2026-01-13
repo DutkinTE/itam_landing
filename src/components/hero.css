@@ -11,7 +11,7 @@
     background:
         linear-gradient(rgba(255, 255, 255, .035) 3px, transparent 3px),
         linear-gradient(90deg, rgba(255, 255, 255, .035) 3px, transparent 3px);
-    background-size: 102px 108px;
+    background-size: 102px 102px;
     opacity: .55;
 }
 
@@ -172,5 +172,60 @@
     .hero__video {
         right: 18%;
         width: 56%;
+    }
+}
+
+@media (max-width: 450px) {
+    .hero {
+        margin-top: 88px;
+    }
+
+    .hero__bg {
+        background-size: 50px 50px;
+    }
+
+    .hero__layout {
+        height: 100%;
+        min-height: 600px;
+        padding-top: 30px;
+        padding-bottom: 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 24px;
+    }
+
+    .hero__title {
+        font-size: 40px;
+        line-height: 44px;
+    }
+
+    .hero__desc {
+        position: static;
+        margin-top: auto;
+        max-width: 100%;
+        font-size: 16px;
+        line-height: 19.2px;
+        text-align: center;
+    }
+
+    .hero__more {
+        position: static;
+        font-size: 14px;
+        line-height: 16.8px;
+        gap: 8px;
+        padding: 0;
+        margin-top: 14px;
+    }
+
+    .hero__video {
+        top: 68px;
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 375px;
+        height: 375px;
+        object-fit: contain;
     }
 }
