@@ -72,9 +72,8 @@ export default function MediaPage(): JSX.Element {
 
 
                         </div>
-
                         <div className="mediaPage__list">
-                            <div className="mediaPage__divider" />
+                            <div className="mediaPage__divider mediaPage__divider__show" />
 
                             {mediaItems.map((item) => (
                                 <article

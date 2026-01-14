@@ -154,3 +154,79 @@
     }
 
 }
+
+@media (max-width: 450px) {
+    .teamPage {
+        padding-top: 216px;
+        padding-bottom: 24px;
+    }
+
+    .teamPage__container {
+        padding-inline: 24px;
+        gap: 28px;
+    }
+
+    .teamPage__hero {
+        gap: 20px;
+    }
+
+    .teamPage__title {
+        font-size: 40px;
+        line-height: 44px;
+    }
+
+    .teamPage__filters {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        width: 100%;
+        padding-bottom: 4px;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .teamPage__filters::-webkit-scrollbar {
+        height: 0;
+    }
+
+    .teamPage__filter {
+        height: 40px;
+        padding: 10px 16px;
+        border-radius: 12px;
+        font-size: 14px;
+        line-height: 18.2px;
+        white-space: nowrap;
+    }
+
+    .teamPage__grid {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .teamPage__column {
+        gap: 16px;
+    }
+
+    .teamPage__card {
+        padding: 16px;
+        border-radius: 16px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .teamPage__avatar {
+        width: 80px;
+        height: 80px;
+        border-radius: 8px;
+    }
+
+    .teamPage__name {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .teamPage__role {
+        font-size: 18px;
+        line-height: 24px;
+    }
+}
