@@ -375,7 +375,6 @@
     .achievements__title {
         font-size: 28px;
         line-height: 30.8px;
-        font-weight: 400;
     }
 
     .achievements__content {
@@ -414,7 +413,6 @@
     .achievements__statNumber {
         font-size: 24px;
         line-height: 26.4px;
-        font-weight: 400;
     }
 
     .achievements__statText {
@@ -446,7 +444,6 @@
     .achievements__listTitle {
         font-size: 24px;
         line-height: 26.4px;
-        font-weight: 400;
     }
 
     .achievements__listRow {

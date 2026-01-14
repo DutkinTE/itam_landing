@@ -296,7 +296,6 @@
     .about__title {
         font-size: 28px;
         line-height: 30.8px;
-        font-weight: 400;
     }
 
     .about__content {
@@ -331,7 +330,6 @@
     .about__statNumber {
         font-size: 24px;
         line-height: 26.4px;
-        font-weight: 400;
     }
 
     .about__statText {
