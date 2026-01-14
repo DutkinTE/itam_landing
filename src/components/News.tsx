@@ -74,7 +74,7 @@ export default function News(): JSX.Element {
                                     </div>
                                 </div>
 
-                                <div className="news__divider" />
+                                <div className="news__divider news__divider_hide" />
                             </div>
                         ))}
                         <a className="news__more" href="/media">

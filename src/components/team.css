@@ -183,3 +183,78 @@
         margin-top: 48px;
     }
 }
+
+@media (max-width: 450px) {
+    .team {
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+
+    .team__container {
+        padding-inline: 24px;
+        gap: 28px;
+    }
+
+    .team__headerRow {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .team__header {
+        height: auto;
+        gap: 2px;
+    }
+
+    .team__eyebrowRow {
+        gap: 10px;
+    }
+
+    .team__eyebrow {
+        font-size: 16px;
+        line-height: 19.2px;
+    }
+
+    .team__title {
+        font-size: 28px;
+        line-height: 30.8px;
+        font-weight: 400;
+    }
+
+    .team__moreButton {
+        display: none;
+    }
+
+    .team__carouselRow {
+        gap: 16px;
+    }
+
+    .team__gridRow {
+        gap: 16px;
+    }
+
+    .team__cardLarge {
+        width: 216px;
+        height: 216px;
+    }
+
+    .team__cardLargeImage {
+        height: 216px;
+        border-radius: 24px;
+    }
+
+    .team__cluster {
+        width: 216px;
+        gap: 16px;
+    }
+
+    .team__avatarWrapper {
+        height: 100px;
+    }
+
+    .team__avatar {
+        width: 100px;
+        height: 100px;
+        border-radius: 12px;
+    }
+}

@@ -311,3 +311,145 @@
         font-size: 18px;
     }
 }
+
+@media (max-width: 450px) {
+    .news {
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+
+    .news__container {
+        padding-inline: 24px;
+    }
+
+    .news__layout {
+        gap: 28px;
+    }
+
+    .news__eyebrowRow {
+        gap: 10px;
+    }
+
+    .news__eyebrow {
+        font-size: 16px;
+        line-height: 19.2px;
+    }
+
+    .news__title {
+        font-size: 28px;
+        line-height: 30.8px;
+        font-weight: 400;
+    }
+
+    .news__list {
+        gap: 28px;
+    }
+
+    .news__item {
+        gap: 24px;
+    }
+
+    .news__row {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .news__date {
+        width: auto;
+        font-size: 14px;
+        line-height: 16.8px;
+        order: 3;
+    }
+
+    .news__content {
+        display: contents;
+    }
+
+    .news__image {
+        width: 100%;
+        height: 185px;
+        border-radius: 12px;
+        order: 1;
+    }
+
+    .news__textColumn {
+        display: contents;
+    }
+
+    .news__meta {
+        gap: 8px;
+        order: 2;
+    }
+
+    .news__badge {
+        padding: 4px 10px;
+        border-radius: 8px;
+    }
+
+    .news__badgeLabel {
+        font-size: 14px;
+        line-height: 19.6px;
+        font-weight: 400;
+    }
+
+    .news__headline {
+        font-size: 16px;
+        line-height: 19.2px;
+        font-weight: 400;
+        width: 70%;
+    }
+
+    .news__readMore {
+        width: calc(100% - 32px);
+        justify-content: center;
+        padding: 10px 16px;
+        border-radius: 12px;
+        gap: 4px;
+        order: 4;
+    }
+
+    .news__readMoreLabel {
+        max-width: 180px;
+        font-size: 16px;
+        line-height: 20.8px;
+        text-align: center;
+    }
+
+    .news__readMoreIcon {
+        width: 22px;
+        height: 22px;
+    }
+
+    .news__more {
+        margin-top: 0;
+        gap: 10px;
+        align-items: flex-start;
+    }
+
+    .news__moreRow {
+        gap: 6px;
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+
+    .news__moreLabel {
+        font-size: 16px;
+        line-height: 19.2px;
+    }
+
+    .news__moreSquare,
+    .news__moreIcon {
+        width: 12px;
+        height: 12px;
+    }
+
+    .news__moreLine {
+        width: 100%;
+        height: 0;
+        border-top: 1px solid var(--white-400);
+    }
+
+    .news__divider_hide {
+        display: none;
+    }
+}
