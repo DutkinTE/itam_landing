@@ -273,9 +273,6 @@
 }
 
 @media (max-width: 450px) {
-    .about.container {
-        padding-inline: 24px;
-    }
 
     .about {
         padding-top: 24px;

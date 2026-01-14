@@ -83,3 +83,10 @@ body {
     padding-inline: 40px;
   }
 }
+
+@media (max-width: 450px) {
+  .container {
+    max-width: 100%;
+    padding-inline: 24px;
+  }
+}

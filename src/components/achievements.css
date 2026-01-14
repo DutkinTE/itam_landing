@@ -160,6 +160,10 @@
     padding: 16px 0;
 }
 
+.achievements__statsDivider2 {
+    display: none;
+}
+
 .achievements__listRowContainer {
     transition: all 1s ease;
 }
@@ -346,5 +350,156 @@
 
     .achievements__statsDivider {
         height: 140px;
+    }
+}
+
+@media (max-width: 450px) {
+    .achievements {
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+
+    .achievements__layout {
+        gap: 28px;
+    }
+
+    .achievements__eyebrowRow {
+        gap: 10px;
+    }
+
+    .achievements__eyebrow {
+        font-size: 16px;
+        line-height: 19.2px;
+    }
+
+    .achievements__title {
+        font-size: 28px;
+        line-height: 30.8px;
+        font-weight: 400;
+    }
+
+    .achievements__content {
+        gap: 24px;
+    }
+
+    .achievements__lead {
+        margin: 0;
+        font-size: 16px;
+        line-height: 19.2px;
+    }
+
+    .achievements__stats {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+    }
+
+    .achievements__statCard {
+        width: 100%;
+        padding-inline: 0;
+        align-items: flex-start;
+        gap: 16px;
+        border-radius: 0;
+
+    }
+
+    .achievements__statsDivider2 {
+        display: block;
+        width: 100%;
+        height: 0;
+        background-color: transparent;
+        border-top: 1px solid #505050;
+    }
+
+    .achievements__statNumber {
+        font-size: 24px;
+        line-height: 26.4px;
+        font-weight: 400;
+    }
+
+    .achievements__statText {
+        text-align: left;
+        font-size: 16px;
+        line-height: 19.2px;
+    }
+
+    .achievements__statsDivider {
+        width: 100%;
+        height: 0;
+        background-color: transparent;
+        border-top: 1px solid #505050;
+    }
+
+    .achievements__list {
+        align-items: flex-start;
+        gap: 24px;
+    }
+
+    .achievements__listSeparator {
+        display: none;
+    }
+
+    .achievements__listHeader {
+        gap: 16px;
+    }
+
+    .achievements__listTitle {
+        font-size: 24px;
+        line-height: 26.4px;
+        font-weight: 400;
+    }
+
+    .achievements__listRow {
+        width: calc(100% - 48px);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-inline: 24px;
+    }
+
+    .achievements__listCell {
+        font-size: 14px;
+        line-height: 16.8px;
+    }
+
+    .achievements__listCell--event {
+        width: 100%;
+        color: var(--text-primary);
+    }
+
+    .achievements__listCell--team,
+    .achievements__listCell--place {
+        width: 100%;
+        color: var(--text-secondary);
+    }
+
+    .achievements__more {
+        gap: 10px;
+        align-items: center;
+    }
+
+    .achievements__moreRow {
+        gap: 6px;
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+
+    .achievements__moreLabel {
+        font-size: 16px;
+        line-height: 19.2px;
+    }
+
+    .achievements__moreSquare,
+    .achievements__moreIcon {
+        width: 12px;
+        height: 12px;
+    }
+
+    .achievements__moreLine {
+        width: 100%;
+        height: 0;
+        border-top: 1px solid var(--white-400);
     }
 }

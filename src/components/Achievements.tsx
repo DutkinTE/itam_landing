@@ -96,6 +96,8 @@ export default function Achievements(): JSX.Element {
                     </div>
 
                     <div className="achievements__stats container">
+                        <div className="achievements__statsDivider2" />
+
                         <div className="achievements__statCard">
                             <div className="achievements__statNumber">~14 млн</div>
                             <div className="achievements__statText">
@@ -126,6 +128,8 @@ export default function Achievements(): JSX.Element {
                                 «Мастерская побед»
                             </div>
                         </div>
+
+                        <div className="achievements__statsDivider2" />
                     </div>
 
                     <div className="achievements__list">

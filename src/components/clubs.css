@@ -192,3 +192,58 @@
         gap: 15px;
     }
 }
+
+@media (max-width: 450px) {
+    .clubs {
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+
+    .clubs__layout {
+        gap: 28px;
+    }
+
+    .clubs__eyebrowRow {
+        gap: 10px;
+    }
+
+    .clubs__eyebrow {
+        font-size: 16px;
+        line-height: 19.2px;
+    }
+
+    .clubs__title {
+        font-size: 28px;
+        line-height: 30.8px;
+        font-weight: 400;
+    }
+
+    .clubs__container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .clubs__listWrapper {
+        gap: 20px;
+    }
+
+    .clubs__list {
+        gap: 20px;
+    }
+
+    .clubs__itemLabel {
+        font-size: 28px;
+        line-height: 30.8px;
+        font-weight: 400;
+        color: var(--text-secondary);
+    }
+
+    .clubs__iconArrowRight {
+        display: none;
+    }
+
+    .clubs__img {
+        display: none;
+    }
+}
