@@ -127,10 +127,25 @@
     color: var(--text-primary);
 }
 
+.projects__card:not(.projects__card--current) .projects__cardTitle {
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    margin: 0;
+}
+
 .projects__cardTags {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+}
+
+.projects__card:not(.projects__card--current) .projects__cardTags {
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    margin: 0;
+    gap: 0;
 }
 
 .projects__cardTag {
@@ -297,6 +312,9 @@
         font-size: 18px;
         line-height: 19.8px;
         font-weight: 400;
+        opacity: 1;
+        visibility: visible;
+        height: auto;
     }
 
     .projects__cardTags {

@@ -1,4 +1,4 @@
-import { type JSX, useEffect, useState } from "react";
+import { type JSX, useEffect, useLayoutEffect, useRef, useState } from "react";
 import "./projects.css";
 import ArrowButton from "./ArrowButton";
 
@@ -33,6 +33,11 @@ export default function Projects(): JSX.Element {
     ];
 
     const [activeIndex, setActiveIndex] = useState(0);
+    const [trackOffset, setTrackOffset] = useState(0);
+    const [trackPadding, setTrackPadding] = useState(0);
+    const carouselRef = useRef<HTMLDivElement | null>(null);
+    const trackRef = useRef<HTMLDivElement | null>(null);
+    const cardRefs = useRef<(HTMLElement | null)[]>([]);
 
     const [isMobile, setIsMobile] = useState(() =>
         typeof window !== "undefined" && window.matchMedia("(max-width: 768px)").matches
@@ -52,10 +57,48 @@ export default function Projects(): JSX.Element {
         }
     }, []);
 
-    const currentIndex = activeIndex;
-    const trackTransform = isMobile
-        ? "none"
-        : `translateX(calc(50vw - 417px - (1072px * ${currentIndex})))`;
+    useLayoutEffect(() => {
+        if (isMobile) return;
+        if (!carouselRef.current || !trackRef.current) return;
+
+        const updateOffset = () => {
+            const carousel = carouselRef.current;
+            const track = trackRef.current;
+            const card = cardRefs.current[activeIndex];
+
+            if (!carousel || !track || !card) return;
+
+            const carouselWidth = carousel.clientWidth;
+            const cardHalf = card.offsetWidth / 2;
+            const padding = Math.max(0, carouselWidth / 2 - cardHalf);
+            const trackWidth = track.scrollWidth;
+            const cardCenter = card.offsetLeft + cardHalf;
+
+            if (padding !== trackPadding) {
+                setTrackPadding(padding);
+                return;
+            }
+
+            const desiredOffset = carouselWidth / 2 - cardCenter;
+            const minOffset = carouselWidth - trackWidth;
+            const maxOffset = 0;
+
+            setTrackOffset(Math.min(maxOffset, Math.max(minOffset, desiredOffset)));
+        };
+
+        updateOffset();
+
+        const resizeObserver = new ResizeObserver(() => updateOffset());
+        resizeObserver.observe(carouselRef.current);
+        resizeObserver.observe(trackRef.current);
+        cardRefs.current.forEach((node) => {
+            if (node) resizeObserver.observe(node);
+        });
+
+        return () => resizeObserver.disconnect();
+    }, [activeIndex, isMobile, trackPadding]);
+
+    const trackTransform = isMobile ? "none" : `translateX(${trackOffset}px)`;
 
     return (
         <section className="projects" >
@@ -79,10 +122,14 @@ export default function Projects(): JSX.Element {
 
 
             </div>
-            <div className="projects__carousel">
+            <div className="projects__carousel" ref={carouselRef}>
                 <div
                     className="projects__track"
-                    style={{ transform: trackTransform }}
+                    style={{
+                        transform: trackTransform,
+                        paddingInline: isMobile ? undefined : `${trackPadding}px`,
+                    }}
+                    ref={trackRef}
                 >
                     {projects.map((project, index) => {
                         let positionClass = "projects__card--rest";
@@ -101,6 +148,9 @@ export default function Projects(): JSX.Element {
                             <article
                                 className={`projects__card ${positionClass}`}
                                 key={project.title}
+                                ref={(node) => {
+                                    cardRefs.current[index] = node;
+                                }}
                                 onClick={
                                     isCurrent ? undefined : () => setActiveIndex(index)
                                 }
