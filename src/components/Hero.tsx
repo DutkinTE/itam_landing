@@ -7,13 +7,16 @@ export default function Hero(): JSX.Element {
             <div className="hero__bg" aria-hidden="true" />
             <video
                 className="hero__video"
-                src="/images/hero_desktop.webm"
                 autoPlay
                 loop
                 muted
                 playsInline
                 aria-hidden="true"
-            />
+            >
+
+                <source src="/images/hero_desktop-1.mov" type="video/quicktime" />
+                <source src="/images/hero_desktop.webm" type="video/webm" />
+            </video>
 
             <div className="container hero__layout" >
                 <h1 className="hero__title hero__title--misis">IT at MISIS</h1>
