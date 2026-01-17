@@ -1,16 +1,18 @@
-import { type JSX } from "react";
+import { type JSX, useState } from "react";
 import "./clubs.css";
 
 export default function Clubs(): JSX.Element {
+    const defaultImage = "./images/EMPTYCLUB.png0001 1.png";
     const clubsList = [
-        "Хакатон клуб",
-        "Дизайн клуб",
-        "AI-knowledge клуб",
-        "Геймдев клуб",
-        "Клуб робототехники",
-        "ACM клуб",
-        "CTF клуб",
+        { name: "Хакатон клуб", image: "./images/HACKCLUB.png0001 1.png" },
+        { name: "Дизайн клуб", image: "./images/DAMCLUB.png0001 1.png" },
+        { name: "AI-knowledge клуб", image: "./images/AIKCCLUB.png0001 1.png" },
+        { name: "Геймдев клуб", image: "./images/GAMEDEVCLUB.png0001 1.png" },
+        { name: "Клуб робототехники", image: "./images/ROBOCLUB.png0001 1.png" },
+        { name: "ACM клуб", image: "./images/ACMCLUB.png0001 1.png" },
+        { name: "CTF клуб", image: "./images/CTFCLUB.png0001 1.png" },
     ];
+    const [currentImage, setCurrentImage] = useState(defaultImage);
 
     return (
         <section className="clubs" id="clubs">
@@ -26,7 +28,7 @@ export default function Clubs(): JSX.Element {
                     <div className="clubs__container">
                         <div className="clubs__listWrapper">
                             <div className="clubs__list">
-                                {clubsList.map((name) => {
+                                {clubsList.map(({ name, image }) => {
                                     const content = (
                                         <>
                                             <img
@@ -44,6 +46,8 @@ export default function Clubs(): JSX.Element {
                                                 className="clubs__item"
                                                 href="/club/hackathon"
                                                 key={name}
+                                                onMouseEnter={() => setCurrentImage(image)}
+                                                onMouseLeave={() => setCurrentImage(defaultImage)}
                                             >
                                                 {content}
                                             </a>
@@ -51,14 +55,19 @@ export default function Clubs(): JSX.Element {
                                     }
 
                                     return (
-                                        <div className="clubs__item" key={name}>
+                                        <div
+                                            className="clubs__item"
+                                            key={name}
+                                            onMouseEnter={() => setCurrentImage(image)}
+                                            onMouseLeave={() => setCurrentImage(defaultImage)}
+                                        >
                                             {content}
                                         </div>
                                     );
                                 })}
                             </div>
                         </div>
-                        <img className="clubs__img" src="./images/3d-element.svg" alt="core" />
+                        <img className="clubs__img" src={currentImage} alt="club" />
                     </div>
 
                 </div>
