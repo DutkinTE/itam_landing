@@ -1,5 +1,6 @@
 import { type JSX } from "react";
 import Header from "./components/Header";
+import PageTransition from "./components/PageTransition";
 import "./App.css";
 import "./team-page.css";
 
@@ -53,6 +54,7 @@ const rightColumn: Member[] = [
 export default function TeamPage(): JSX.Element {
     return (
         <div className="page">
+            <PageTransition />
             <Header />
             <main>
                 <section className="teamPage">
@@ -142,4 +144,3 @@ export default function TeamPage(): JSX.Element {
         </div>
     );
 }
-

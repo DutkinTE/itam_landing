@@ -1,6 +1,7 @@
 import { type JSX, useEffect, useMemo, useState } from "react";
 import Papa from "papaparse";
 import Header from "./components/Header";
+import PageTransition from "./components/PageTransition";
 import "./App.css";
 import "./hackathon-wins.css";
 
@@ -86,6 +87,7 @@ export default function HackathonWins(): JSX.Element {
 
     return (
         <div className="page" id="hackathon-wins">
+            <PageTransition />
             <Header />
             <main>
                 <section className="wins">

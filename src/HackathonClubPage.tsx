@@ -1,11 +1,13 @@
 import { type JSX } from "react";
 import Header from "./components/Header";
+import PageTransition from "./components/PageTransition";
 import "./App.css";
 import "./hackathon-club.css";
 
 export default function HackathonClubPage(): JSX.Element {
     return (
         <div className="page">
+            <PageTransition />
             <Header />
             <main>
                 <section className="hackClub">
@@ -302,4 +304,3 @@ export default function HackathonClubPage(): JSX.Element {
         </div>
     );
 }
-

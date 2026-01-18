@@ -1,6 +1,7 @@
 import { type JSX } from "react";
 import Header from "./components/Header";
 import ArrowButton from "./components/ArrowButton";
+import PageTransition from "./components/PageTransition";
 import "./App.css";
 import "./projects-page.css";
 
@@ -46,6 +47,7 @@ const projects: Project[] = [
 export default function ProjectsPage(): JSX.Element {
     return (
         <div className="page">
+            <PageTransition />
             <Header />
             <main>
                 <section className="projectsPage">

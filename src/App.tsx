@@ -8,10 +8,12 @@ import Partners from './components/Partners'
 import Clubs from './components/Clubs'
 import News from './components/News'
 import Team from './components/Team'
+import PageTransition from './components/PageTransition'
 
 function App() {
   return (
     <div className="page" id="highest-point">
+      <PageTransition />
       <Header />
       <Hero />
       <main>

@@ -1,6 +1,7 @@
 import { type JSX } from "react";
 import Header from "./components/Header";
 import ArrowButton from "./components/ArrowButton";
+import PageTransition from "./components/PageTransition";
 import "./App.css";
 import "./media-page.css";
 
@@ -41,6 +42,7 @@ const mediaItems: MediaItem[] = [
 export default function MediaPage(): JSX.Element {
     return (
         <div className="page">
+            <PageTransition />
             <Header />
             <main>
                 <section className="mediaPage">
