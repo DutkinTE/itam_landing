@@ -4,7 +4,7 @@ import "./page-transition.css";
 type TransitionMode = "enter" | "exit";
 
 const GRID_SIZE = 56;
-const TRANSITION_DURATION = 1800;
+const TRANSITION_DURATION = 1200;
 
 export default function PageTransition(): JSX.Element {
     const canvasRef = useRef<HTMLCanvasElement | null>(null);
