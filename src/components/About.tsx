@@ -71,9 +71,13 @@ export default function About(): JSX.Element {
         const initializeScene = (texture: THREE.Texture) => {
             scene = new THREE.Scene();
             camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
-            const image = texture.image as HTMLImageElement | undefined;
-            const textureWidth = image?.naturalWidth ?? wrap.clientWidth;
-            const textureHeight = image?.naturalHeight ?? wrap.clientHeight;
+            const image = texture.image as HTMLImageElement | ImageBitmap | undefined;
+            const textureWidth =
+                (image && "naturalWidth" in image ? image.naturalWidth : image?.width) ??
+                wrap.clientWidth;
+            const textureHeight =
+                (image && "naturalHeight" in image ? image.naturalHeight : image?.height) ??
+                wrap.clientHeight;
 
             const shaderUniforms = {
                 u_mouse: { value: new THREE.Vector2() },

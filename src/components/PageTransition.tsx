@@ -3,7 +3,7 @@ import "./page-transition.css";
 
 type TransitionMode = "enter" | "exit";
 
-const GRID_SIZE = 84;
+const GRID_SIZE = 56;
 const TRANSITION_DURATION = 1800;
 
 export default function PageTransition(): JSX.Element {
