@@ -9,6 +9,7 @@ import Clubs from './components/Clubs'
 import News from './components/News'
 import Team from './components/Team'
 import PageTransition from './components/PageTransition'
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <News />
         <Team />
       </main>
+      <Footer />
     </div>
   )
 }

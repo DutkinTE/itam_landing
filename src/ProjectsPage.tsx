@@ -2,6 +2,7 @@ import { type JSX } from "react";
 import Header from "./components/Header";
 import ArrowButton from "./components/ArrowButton";
 import PageTransition from "./components/PageTransition";
+import Footer from "./components/Footer";
 import "./App.css";
 import "./projects-page.css";
 
@@ -130,6 +131,7 @@ export default function ProjectsPage(): JSX.Element {
                     </div>
                 </section>
             </main>
+            <Footer />
         </div>
     );
 }

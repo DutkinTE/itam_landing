@@ -1,6 +1,7 @@
 import { type JSX } from "react";
 import Header from "./components/Header";
 import PageTransition from "./components/PageTransition";
+import Footer from "./components/Footer";
 import "./App.css";
 import "./hackathon-club.css";
 
@@ -301,6 +302,7 @@ export default function HackathonClubPage(): JSX.Element {
                     </div>
                 </section>
             </main>
+            <Footer />
         </div>
     );
 }

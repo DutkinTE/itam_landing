@@ -1,6 +1,7 @@
 import { type JSX } from "react";
 import Header from "./components/Header";
 import PageTransition from "./components/PageTransition";
+import Footer from "./components/Footer";
 import "./App.css";
 import "./team-page.css";
 
@@ -141,6 +142,7 @@ export default function TeamPage(): JSX.Element {
                     </div>
                 </section>
             </main>
+            <Footer />
         </div>
     );
 }

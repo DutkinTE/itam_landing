@@ -2,6 +2,7 @@ import { type JSX, useEffect, useMemo, useState } from "react";
 import Papa from "papaparse";
 import Header from "./components/Header";
 import PageTransition from "./components/PageTransition";
+import Footer from "./components/Footer";
 import "./App.css";
 import "./hackathon-wins.css";
 
@@ -166,6 +167,7 @@ export default function HackathonWins(): JSX.Element {
                     </div>
                 </section>
             </main>
+            <Footer />
         </div>
     );
 }
