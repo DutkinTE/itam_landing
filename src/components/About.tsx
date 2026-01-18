@@ -71,6 +71,9 @@ export default function About(): JSX.Element {
         const initializeScene = (texture: THREE.Texture) => {
             scene = new THREE.Scene();
             camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
+            const image = texture.image as HTMLImageElement | undefined;
+            const textureWidth = image?.naturalWidth ?? wrap.clientWidth;
+            const textureHeight = image?.naturalHeight ?? wrap.clientHeight;
 
             const shaderUniforms = {
                 u_mouse: { value: new THREE.Vector2() },
@@ -78,7 +81,7 @@ export default function About(): JSX.Element {
                 u_aberrationIntensity: { value: 0.0 },
                 u_texture: { value: texture },
                 u_resolution: { value: new THREE.Vector2(wrap.clientWidth, wrap.clientHeight) },
-                u_textureSize: { value: new THREE.Vector2(1391, 856) },
+                u_textureSize: { value: new THREE.Vector2(textureWidth, textureHeight) },
             };
 
             planeMesh = new THREE.Mesh(

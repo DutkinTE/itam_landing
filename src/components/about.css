@@ -128,7 +128,8 @@
 .about__imageWrap {
     width: 100%;
     max-width: 1520px;
-    height: 856.34px;
+    height: auto;
+    aspect-ratio: 1391 / 856;
     border-radius: 32px;
     overflow: hidden;
     position: relative;
@@ -239,7 +240,7 @@
     }
 
     .about__imageWrap {
-        height: 600px;
+        height: auto;
     }
 }
 
@@ -278,7 +279,7 @@
     }
 
     .about__imageWrap {
-        height: 530px;
+        height: auto;
     }
 }
 
@@ -351,7 +352,7 @@
 
     .about__imageWrap {
         border-radius: 12px;
-        height: 230px;
+        height: auto;
     }
 
     .about__image {
