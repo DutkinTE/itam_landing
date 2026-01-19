@@ -148,6 +148,13 @@ export default function HackathonClubPage(): JSX.Element {
                                     </p>
                                 </div>
 
+                                
+
+                                <div className="hackClub__imagesRow hackClub__imagesRow--wide">
+                                    <div className="hackClub__imageLarge" />
+                                    <div className="hackClub__imageLarge" />
+                                </div>
+
                                 <div className="hackClub__textBlock">
                                     <h2 className="hackClub__sectionTitle">Цель клуба</h2>
                                     <p className="hackClub__text">
@@ -162,13 +169,6 @@ export default function HackathonClubPage(): JSX.Element {
                                         программисты, аналитики и дизайнеры.
                                     </p>
                                 </div>
-
-                                <div className="hackClub__imagesRow hackClub__imagesRow--wide">
-                                    <div className="hackClub__imageLarge" />
-                                    <div className="hackClub__imageLarge" />
-                                </div>
-
-                                
 
                                 <div className="hackClub__imagesRow">
                                     <div className="hackClub__imageMedium" />
