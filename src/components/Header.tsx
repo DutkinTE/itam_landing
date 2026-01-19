@@ -132,7 +132,7 @@ export default function Header(): JSX.Element {
                             <div className="header__submenuDot" />
                             <a
                                 className="header__submenuLabel"
-                                href="/#clubs"
+                                href="/club/design"
                                 onClick={handleCloseMenu}
                             >
                                 Дизайн
@@ -142,7 +142,7 @@ export default function Header(): JSX.Element {
                             <div className="header__submenuDot" />
                             <a
                                 className="header__submenuLabel"
-                                href="/#clubs"
+                                href="/club/aikc"
                                 onClick={handleCloseMenu}
                             >
                                 AI-knowledge
@@ -152,7 +152,7 @@ export default function Header(): JSX.Element {
                             <div className="header__submenuDot" />
                             <a
                                 className="header__submenuLabel"
-                                href="/#clubs"
+                                href="/club/gamedev"
                                 onClick={handleCloseMenu}
                             >
                                 Геймдев
@@ -162,7 +162,7 @@ export default function Header(): JSX.Element {
                             <div className="header__submenuDot" />
                             <a
                                 className="header__submenuLabel"
-                                href="/#clubs"
+                                href="/club/robo"
                                 onClick={handleCloseMenu}
                             >
                                 Робо
@@ -172,7 +172,7 @@ export default function Header(): JSX.Element {
                             <div className="header__submenuDot" />
                             <a
                                 className="header__submenuLabel"
-                                href="/#clubs"
+                                href="/club/acm"
                                 onClick={handleCloseMenu}
                             >
                                 ACM
@@ -182,7 +182,7 @@ export default function Header(): JSX.Element {
                             <div className="header__submenuDot" />
                             <a
                                 className="header__submenuLabel"
-                                href="/#clubs"
+                                href="/club/ctf"
                                 onClick={handleCloseMenu}
                             >
                                 CTF

@@ -1,41 +1,41 @@
 @charset "utf-8";
 
-.hackClub {
+.designClub {
     padding-top: 120px;
     color: var(--text-primary);
 }
 
-.hackClub__container {
+.designClub__container {
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 32px;
 }
 
-.hackClub__heroInner {
+.designClub__heroInner {
     margin-top: 160px;
 }
 
-.hackClub__heroInner {
+.designClub__heroInner {
     display: flex;
     flex-direction: column;
     gap: 32px;
 }
 
-.hackClub__title {
+.designClub__title {
     margin: 0;
     font-size: 72px;
     font-weight: bold;
     line-height: 79.2px;
 }
 
-.hackClub__buttonsRow {
+.designClub__buttonsRow {
     display: inline-flex;
     align-items: center;
     gap: 32px;
 }
 
-.hackClub__primaryButton {
+.designClub__primaryButton {
     padding: 12px 20px;
     font-size: 16px;
     font-weight: normal;
@@ -51,7 +51,7 @@
     text-decoration: none;
 }
 
-.hackClub__primaryLabel {
+.designClub__primaryLabel {
     max-width: 180px;
     padding: 0 4px;
     display: flex;
@@ -62,39 +62,39 @@
     line-height: 20.8px;
 }
 
-.hackClub__primaryIcon {
+.designClub__primaryIcon {
     display: inline-block;
     margin-left: 10px;
     transition: transform 0.2s ease;
     color: var(--black-main);
 }
 
-.hackClub__primaryIcon path {
+.designClub__primaryIcon path {
     fill: currentColor;
 }
 
-.hackClub__primaryButton:hover {
+.designClub__primaryButton:hover {
     background-color: var(--white-600);
 }
 
-.hackClub__primaryButton:hover .hackClub__primaryIcon {
+.designClub__primaryButton:hover .designClub__primaryIcon {
     transform: rotate(-45deg);
 }
 
-.hackClub__primaryButton:active {
+.designClub__primaryButton:active {
     background-color: var(--bg-secondary-block);
     color: var(--text-brand);
 }
 
-.hackClub__primaryButton:active .hackClub__primaryIcon {
+.designClub__primaryButton:active .designClub__primaryIcon {
     color: var(--text-brand);
 }
 
-.hackClub__primaryButton:active .hackClub__primaryLabel {
+.designClub__primaryButton:active .designClub__primaryLabel {
     color: var(--text-brand);
 }
 
-.hackClub__statsRow {
+.designClub__statsRow {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -102,13 +102,13 @@
     margin-bottom: 48px;
 }
 
-.hackClub__statsCards {
+.designClub__statsCards {
     display: flex;
     align-items: center;
     gap: 24px;
 }
 
-.hackClub__statCard {
+.designClub__statCard {
     padding: 24px;
     border-radius: 16px;
     background: #171618;
@@ -119,64 +119,79 @@
     gap: 6px;
 }
 
-.hackClub__statNumber {
+.designClub__statNumber {
     font-size: 24px;
     font-weight: bold;
     line-height: 26.4px;
 }
 
-.hackClub__statLabel {
+.designClub__statLabel {
     color: var(--text-secondary);
     font-size: 20px;
     line-height: 24px;
 }
 
-.hackClub__badgeWrap {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.hackClub__badge {
-    height: 20px;
-    width: auto;
-    display: block;
-}
-
-.hackClub__marks {
+.designClub__marks {
     display: inline-flex;
     align-items: center;
     gap: 12px;
-    flex-wrap: wrap;
 }
 
-.hackClub__mark {
+.designClub__mark {
     display: inline-block;
+    background: var(--white-main);
+    border-radius: 999px;
 }
 
-.hackClub__section {
+.designClub__mark--wide {
+    width: 46px;
+    height: 38px;
+}
+
+.designClub__mark--mid {
+    width: 38px;
+    height: 38px;
+}
+
+.designClub__mark--tall {
+    width: 46px;
+    height: 40px;
+}
+
+.designClub__mark--square {
+    width: 38px;
+    height: 38px;
+}
+
+.designClub__mark--dot {
+    width: 6px;
+    height: 6px;
+    background: #565656;
+}
+
+.designClub__section {
     padding-block: 48px;
 }
 
-.hackClub__section--neutral {
+.designClub__section--neutral {
     background: var(--bg-secondary-block);
     padding-block: 48px;
 }
 
-.hackClub__sectionInner {
+.designClub__sectionInner {
     display: flex;
     flex-direction: column;
     gap: 64px;
 }
 
-.hackClub__textBlock {
+.designClub__textBlock {
     max-width: 1140px;
     display: flex;
     flex-direction: column;
     gap: 24px;
 }
 
-.hackClub__sectionTitle {
+.designClub__sectionTitle {
     margin: 0;
     width: 550px;
     font-size: 32px;
@@ -184,7 +199,7 @@
     line-height: 35.2px;
 }
 
-.hackClub__text {
+.designClub__text {
     margin: 0;
     color: var(--text-secondary);
     font-size: 24px;
@@ -192,7 +207,7 @@
     line-height: 28.8px;
 }
 
-.hackClub__imagesRow {
+.designClub__imagesRow {
     width: 100%;
     display: inline-flex;
     justify-content: flex-start;
@@ -200,38 +215,38 @@
     gap: 32px;
 }
 
-.hackClub__imagesRow--wide {
+.designClub__imagesRow--wide {
     justify-content: flex-start;
 }
 
-.hackClub__imageLarge {
+.designClub__imageLarge {
     flex: 1 1 0;
     height: 419px;
     border-radius: 24px;
     background: #0f0e10;
 }
 
-.hackClub__imageMedium {
+.designClub__imageMedium {
     flex: 1 1 0;
     height: 273px;
     border-radius: 20px;
     background: #0f0e10;
 }
 
-.hackClub__sectionHeading {
+.designClub__sectionHeading {
     margin: 0 0 32px;
     font-size: 48px;
     font-weight: bold;
     line-height: 57.6px;
 }
 
-.hackClub__teamGrid {
+.designClub__teamGrid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 20px;
 }
 
-.hackClub__teamCard {
+.designClub__teamCard {
     padding: 20px;
     border-radius: 24px;
     background: #171618;
@@ -240,46 +255,46 @@
     gap: 24px;
 }
 
-.hackClub__teamAvatar {
+.designClub__teamAvatar {
     width: 100px;
     height: 100px;
     border-radius: 12px;
     object-fit: cover;
 }
 
-.hackClub__teamText {
+.designClub__teamText {
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
 
-.hackClub__teamName {
+.designClub__teamName {
     font-size: 24px;
     font-weight: bold;
     line-height: 28.8px;
 }
 
-.hackClub__teamRole {
+.designClub__teamRole {
     color: var(--text-secondary);
     font-size: 20px;
     font-weight: 400;
     line-height: 24px;
 }
 
-.hackClub__projectsHeader {
+.designClub__projectsHeader {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 32px;
 }
 
-.hackClub__navButtons {
+.designClub__navButtons {
     display: inline-flex;
     align-items: center;
     gap: 28px;
 }
 
-.hackClub__navButton {
+.designClub__navButton {
     width: 48px;
     height: 48px;
     border-radius: 10px;
@@ -291,62 +306,62 @@
     cursor: pointer;
 }
 
-.hackClub__navButton--prev .hackClub__navIcon {
+.designClub__navButton--prev .designClub__navIcon {
     transform: rotate(180deg);
 }
 
-.hackClub__navIcon {
+.designClub__navIcon {
     width: 20px;
     height: 20px;
     display: block;
 }
 
-.hackClub__projectsGrid {
+.designClub__projectsGrid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 64px;
 }
 
-.hackClub__projectCard {
+.designClub__projectCard {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.hackClub__projectImage {
+.designClub__projectImage {
     width: 100%;
     height: 410px;
     border-radius: 20px;
     object-fit: cover;
 }
 
-.hackClub__projectFooter {
+.designClub__projectFooter {
     display: inline-flex;
     justify-content: space-between;
     align-items: center;
     gap: 20px;
 }
 
-.hackClub__projectInfo {
+.designClub__projectInfo {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.hackClub__projectTitle {
+.designClub__projectTitle {
     margin: 0;
     font-size: 32px;
     font-weight: bold;
     line-height: 35.2px;
 }
 
-.hackClub__tagsRow {
+.designClub__tagsRow {
     display: inline-flex;
     align-items: center;
     gap: 20px;
 }
 
-.hackClub__tag {
+.designClub__tag {
     padding: 4px 10px;
     border-radius: 8px;
     background: var(--brand-100);
@@ -356,13 +371,13 @@
     line-height: 19.6px;
 }
 
-.hackClub__projectAction {
+.designClub__projectAction {
     display: inline-flex;
     align-items: center;
     justify-content: center;
 }
 
-.hackClub__projectActionSquare {
+.designClub__projectActionSquare {
     width: 48px;
     height: 48px;
     border-radius: 8px;
@@ -372,215 +387,211 @@
     justify-content: center;
 }
 
-.hackClub__projectActionIcon {
+.designClub__projectActionIcon {
     display: block;
     transform: rotate(-45deg);
 }
 
-.hackClub__projectActionIcon path {
+.designClub__projectActionIcon path {
     fill: var(--icon-secondary);
 }
 
 @media (max-width: 1280px) {
-    .hackClub__container {
+    .designClub__container {
         gap: 24px;
     }
 
-    .hackClub__title {
+    .designClub__title {
         font-size: 72px;
         line-height: 79.2px;
     }
 
-    .hackClub__buttonsRow {
+    .designClub__buttonsRow {
         gap: 16px;
     }
 
-    .hackClub__statsRow {
+    .designClub__statsRow {
         gap: 16px;
     }
 
-    .hackClub__statsCards {
+    .designClub__statsCards {
         gap: 16px;
     }
 
-    .hackClub__sectionInner {
+    .designClub__sectionInner {
         gap: 48px;
     }
 
-    .hackClub__textBlock {
+    .designClub__textBlock {
         max-width: 840px;
         gap: 20px;
     }
 
-    .hackClub__sectionTitle {
+    .designClub__sectionTitle {
         font-size: 28px;
         line-height: 30.8px;
     }
 
-    .hackClub__text {
+    .designClub__text {
         font-size: 20px;
         line-height: 24px;
     }
 
-    .hackClub__imagesRow {
+    .designClub__imagesRow {
         gap: 24px;
     }
 
-    .hackClub__imageLarge {
+    .designClub__imageLarge {
         height: 308px;
         border-radius: 20px;
     }
 
-    .hackClub__imageMedium {
+    .designClub__imageMedium {
         height: 201px;
         border-radius: 16px;
     }
 
-    .hackClub__sectionHeading {
+    .designClub__sectionHeading {
         font-size: 40px;
         line-height: 44px;
     }
 
-    .hackClub__teamGrid {
+    .designClub__teamGrid {
         grid-template-columns: 1fr;
         gap: 16px;
     }
 
-    .hackClub__teamCard {
+    .designClub__teamCard {
         padding: 16px;
         border-radius: 20px;
     }
 
-    .hackClub__teamName {
+    .designClub__teamName {
         font-size: 20px;
         line-height: 24px;
     }
 
-    .hackClub__teamRole {
+    .designClub__teamRole {
         font-size: 18px;
         line-height: 21.6px;
     }
 
-    .hackClub__projectImage {
+    .designClub__projectImage {
         height: 307px;
     }
 
-    .hackClub__projectTitle {
+    .designClub__projectTitle {
         font-size: 28px;
         line-height: 30.8px;
     }
 
-    .hackClub__projectsGrid {
+    .designClub__projectsGrid {
         gap: 32px;
     }
 }
 
 @media (max-width: 1024px) {
-    .hackClub__container {
+    .designClub__container {
         gap: 20px;
     }
 
-    .hackClub__title {
+    .designClub__title {
         font-size: 60px;
         line-height: 66px;
     }
 
-    .hackClub__statsCards {
+    .designClub__statsCards {
         gap: 12px;
     }
 
-    .hackClub__statCard {
+    .designClub__statCard {
         padding: 20px;
     }
 
-    .hackClub__statNumber {
+    .designClub__statNumber {
         font-size: 20px;
         line-height: 22px;
     }
 
-    .hackClub__statLabel {
+    .designClub__statLabel {
         font-size: 16px;
         line-height: 20px;
     }
 
-    .hackClub__sectionInner {
+    .designClub__sectionInner {
         gap: 40px;
     }
 
-    .hackClub__textBlock {
+    .designClub__textBlock {
         max-width: 720px;
         gap: 16px;
     }
 
-    .hackClub__sectionTitle {
+    .designClub__sectionTitle {
         width: 100%;
         font-size: 24px;
         line-height: 26.4px;
     }
 
-    .hackClub__text {
+    .designClub__text {
         font-size: 18px;
         line-height: 22px;
     }
 
-    .hackClub__imageLarge {
+    .designClub__imageLarge {
         height: 260px;
     }
 
-    .hackClub__imageMedium {
+    .designClub__imageMedium {
         height: 180px;
     }
 
-    .hackClub__sectionHeading {
+    .designClub__sectionHeading {
         font-size: 34px;
         line-height: 38px;
     }
 
-    .hackClub__projectImage {
+    .designClub__projectImage {
         height: 260px;
     }
 
-    .hackClub__projectTitle {
+    .designClub__projectTitle {
         font-size: 24px;
         line-height: 26.4px;
     }
 }
 
 @media (max-width: 768px) {
-    .hackClub__badgeWrap {
+    .designClub__marks {
         display: none;
     }
 
-    .hackClub__marks {
-        display: none;
-    }
-
-    .hackClub__projectsGrid {
+    .designClub__projectsGrid {
         grid-template-columns: 1fr;
     }
 }
 
 @media (max-width: 450px) {
-    .hackClub {
+    .designClub {
         padding-top: 80px;
     }
 
-    .hackClub__container {
+    .designClub__container {
         gap: 16px;
         width: calc(100% - 48px);
     }
 
-    .hackClub__title {
+    .designClub__title {
         font-size: 40px;
         line-height: 44px;
     }
 
-    .hackClub__buttonsRow {
+    .designClub__buttonsRow {
         width: calc(100%);
         gap: 16px;
     }
 
-    .hackClub__primaryButton {
+    .designClub__primaryButton {
         flex: 1 1 0;
         height: auto;
         padding: 10px 16px;
@@ -588,65 +599,65 @@
         justify-content: center;
     }
 
-    .hackClub__statsRow {
+    .designClub__statsRow {
         flex-direction: column;
         align-items: stretch;
         gap: 16px;
     }
 
-    .hackClub__statsCards {
+    .designClub__statsCards {
         flex-direction: column;
         align-items: stretch;
         gap: 8px;
     }
 
-    .hackClub__statCard {
+    .designClub__statCard {
         width: calc(100% - 40px);
     }
 
-    .hackClub__sectionInner {
+    .designClub__sectionInner {
         gap: 28px;
     }
 
-    .hackClub__textBlock {
+    .designClub__textBlock {
         max-width: 100%;
         gap: 16px;
     }
 
-    .hackClub__sectionTitle {
+    .designClub__sectionTitle {
         width: calc(100%);
         font-size: 24px;
         line-height: 26.4px;
     }
 
-    .hackClub__text {
+    .designClub__text {
         font-size: 16px;
         line-height: 19.2px;
         width: calc(100%);
     }
 
-    .hackClub__imagesRow {
+    .designClub__imagesRow {
         flex-direction: column;
         gap: 16px;
     }
 
-    .hackClub__imageLarge,
-    .hackClub__imageMedium {
+    .designClub__imageLarge,
+    .designClub__imageMedium {
         height: 184px;
         border-radius: 16px;
     }
 
-    .hackClub__sectionHeading {
+    .designClub__sectionHeading {
         font-size: 28px;
         line-height: 30.8px;
         width: calc(100%);
     }
 
-    .hackClub__teamGrid {
+    .designClub__teamGrid {
         gap: 16px;
     }
 
-    .hackClub__teamCard {
+    .designClub__teamCard {
         padding: 16px;
         border-radius: 16px;
         gap: 16px;
@@ -655,80 +666,80 @@
         width: calc(100% - 32px);
     }
 
-    .hackClub__teamAvatar {
+    .designClub__teamAvatar {
         width: 80px;
         height: 80px;
         border-radius: 8px;
     }
 
-    .hackClub__teamName,
-    .hackClub__teamRole {
+    .designClub__teamName,
+    .designClub__teamRole {
         font-size: 20px;
         line-height: 24px;
     }
 
-    .hackClub__projectsHeader {
+    .designClub__projectsHeader {
         margin-bottom: 24px;
         width: calc(100%);
     }
 
-    .hackClub__navButtons {
+    .designClub__navButtons {
         gap: 20px;
     }
 
-    .hackClub__navButton {
+    .designClub__navButton {
         width: 32px;
         height: 32px;
         padding: 8px;
     }
 
-    .hackClub__navIcon {
+    .designClub__navIcon {
         width: 16px;
         height: 16px;
     }
 
-    .hackClub__projectFooter {
+    .designClub__projectFooter {
         width: calc(100%);
     }
 
-    .hackClub__projectsGrid {
+    .designClub__projectsGrid {
         gap: 24px;
         width: calc(100%);
     }
 
-    .hackClub__projectImage {
+    .designClub__projectImage {
         height: 184px;
         border-radius: 16px;
         width: calc(100%);
     }
 
-    .hackClub__projectTitle {
+    .designClub__projectTitle {
         font-size: 24px;
         line-height: 26.4px;
     }
 
-    .hackClub__projectCard {
+    .designClub__projectCard {
         width: calc(100%);
     }
 
-    .hackClub__tag {
+    .designClub__tag {
         padding: 2px 6px;
         border-radius: 4px;
         font-size: 10px;
         line-height: 14px;
     }
 
-    .hackClub__projectAction {
+    .designClub__projectAction {
         padding: 0;
     }
 
-    .hackClub__projectActionSquare {
+    .designClub__projectActionSquare {
         width: 32px;
         height: 32px;
         border-radius: 10px;
     }
 
-    .hackClub__projectActionIcon {
+    .designClub__projectActionIcon {
         width: 16px;
         height: 16px;
     }

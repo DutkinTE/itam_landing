@@ -7,6 +7,12 @@ import ProjectsPage from './ProjectsPage.tsx'
 import MediaPage from './MediaPage.tsx'
 import TeamPage from './TeamPage.tsx'
 import HackathonClubPage from './HackathonClubPage.tsx'
+import DesignClubPage from './DesignClubPage.tsx'
+import AikcClubPage from './AikcClubPage.tsx'
+import GamedevClubPage from './GamedevClubPage.tsx'
+import RoboClubPage from './RoboClubPage.tsx'
+import AcmClubPage from './AcmClubPage.tsx'
+import CtfClubPage from './CtfClubPage.tsx'
 
 const pathname = window.location.pathname
 
@@ -35,6 +41,36 @@ const isHackathonClubPage =
   pathname.endsWith('/club/hackathon') ||
   pathname.includes('/club/hackathon/')
 
+const isDesignClubPage =
+  pathname === '/club/design' ||
+  pathname.endsWith('/club/design') ||
+  pathname.includes('/club/design/')
+
+const isAikcClubPage =
+  pathname === '/club/aikc' ||
+  pathname.endsWith('/club/aikc') ||
+  pathname.includes('/club/aikc/')
+
+const isGamedevClubPage =
+  pathname === '/club/gamedev' ||
+  pathname.endsWith('/club/gamedev') ||
+  pathname.includes('/club/gamedev/')
+
+const isRoboClubPage =
+  pathname === '/club/robo' ||
+  pathname.endsWith('/club/robo') ||
+  pathname.includes('/club/robo/')
+
+const isAcmClubPage =
+  pathname === '/club/acm' ||
+  pathname.endsWith('/club/acm') ||
+  pathname.includes('/club/acm/')
+
+const isCtfClubPage =
+  pathname === '/club/ctf' ||
+  pathname.endsWith('/club/ctf') ||
+  pathname.includes('/club/ctf/')
+
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     {isHackathonWinsPage ? (
@@ -47,6 +83,18 @@ createRoot(document.getElementById('root')!).render(
       <TeamPage />
     ) : isHackathonClubPage ? (
       <HackathonClubPage />
+    ) : isDesignClubPage ? (
+      <DesignClubPage />
+    ) : isAikcClubPage ? (
+      <AikcClubPage />
+    ) : isGamedevClubPage ? (
+      <GamedevClubPage />
+    ) : isRoboClubPage ? (
+      <RoboClubPage />
+    ) : isAcmClubPage ? (
+      <AcmClubPage />
+    ) : isCtfClubPage ? (
+      <CtfClubPage />
     ) : (
       <App />
     )}
