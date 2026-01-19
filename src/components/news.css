@@ -45,7 +45,7 @@
     color: var(--text-secondary);
     font-size: 24px;
     font-family: 'NTSomic', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 28.8px;
 }
 
@@ -388,13 +388,13 @@
     .news__badgeLabel {
         font-size: 14px;
         line-height: 19.6px;
-        font-weight: 400;
+        font-weight: 500;
     }
 
     .news__headline {
         font-size: 16px;
         line-height: 19.2px;
-        font-weight: 400;
+        font-weight: 500;
         width: 70%;
     }
 

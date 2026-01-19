@@ -200,7 +200,7 @@
     margin: 0;
     color: var(--text-secondary);
     font-size: 24px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 28.8px;
 }
 
@@ -274,7 +274,7 @@
 .hackClub__teamRole {
     color: var(--text-secondary);
     font-size: 20px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 24px;
 }
 
@@ -364,7 +364,7 @@
     background: var(--brand-100);
     color: var(--text-brand);
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 19.6px;
 }
 
