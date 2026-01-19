@@ -113,13 +113,13 @@ export default function DesignClubPage(): JSX.Element {
                                         ))}
                                     </div>
 
-                                    <div className="designClub__marks">
-                                        <span className="designClub__mark designClub__mark--wide" />
-                                        <span className="designClub__mark designClub__mark--mid" />
-                                        <span className="designClub__mark designClub__mark--tall" />
-                                        <span className="designClub__mark designClub__mark--dot" />
-                                        <span className="designClub__mark designClub__mark--dot" />
-                                        <span className="designClub__mark designClub__mark--square" />
+                                    <div className="designClub__logoWrap">
+                                        <img
+                                            className="designClub__logo"
+                                            src="/images/design.svg"
+                                            alt=""
+                                            aria-hidden="true"
+                                        />
                                     </div>
                                 </div>
                             </div>

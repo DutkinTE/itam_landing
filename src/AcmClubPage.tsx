@@ -8,11 +8,9 @@ export default function AcmClubPage(): JSX.Element {
         <ClubPage
             title="ACM клуб"
             buttons={["Чат клуба", "Канал клуба"]}
+            logoSrc="/images/acm.svg"
             stats={[
                 { value: "600+", label: "Участников клуба" },
-            ]}
-            marks={[
-                { width: 63, height: 40, color: "#FAFAFA", radius: 0 },
             ]}
             description="---"
             goal="--"

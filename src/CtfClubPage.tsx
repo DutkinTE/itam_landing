@@ -8,11 +8,9 @@ export default function CtfClubPage(): JSX.Element {
         <ClubPage
             title="CTF клуб"
             buttons={["Чат клуба"]}
+            logoSrc="/images/ctf.svg"
             stats={[
                 { value: "600+", label: "Участников клуба" },
-            ]}
-            marks={[
-                { width: 117, height: 40, color: "#FAFAFA", radius: 0 },
             ]}
             description="---"
             goal="---"

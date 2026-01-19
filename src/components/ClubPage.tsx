@@ -31,6 +31,7 @@ type ClubPageProps = {
     title: string;
     buttons: string[];
     stats: Stat[];
+    logoSrc?: string;
     marks?: Mark[];
     description: string;
     goal: string;
@@ -56,6 +57,7 @@ export default function ClubPage(props: ClubPageProps): JSX.Element {
         title,
         buttons,
         stats,
+        logoSrc,
         marks,
         description,
         goal,
@@ -110,7 +112,16 @@ export default function ClubPage(props: ClubPageProps): JSX.Element {
                                         ))}
                                     </div>
 
-                                    {marks?.length ? (
+                                    {logoSrc ? (
+                                        <div className="hackClub__logoWrap">
+                                            <img
+                                                className="hackClub__logo"
+                                                src={logoSrc}
+                                                alt=""
+                                                aria-hidden="true"
+                                            />
+                                        </div>
+                                    ) : marks?.length ? (
                                         <div className="hackClub__marks">
                                             {marks.map((mark, index) => (
                                                 <span

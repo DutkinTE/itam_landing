@@ -154,6 +154,18 @@
     display: inline-block;
 }
 
+.hackClub__logoWrap {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hackClub__logo {
+    max-height: 40px;
+    width: auto;
+    display: block;
+}
+
 .hackClub__section {
     padding-block: 48px;
 }

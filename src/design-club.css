@@ -131,42 +131,16 @@
     line-height: 24px;
 }
 
-.designClub__marks {
+.designClub__logoWrap {
     display: inline-flex;
     align-items: center;
-    gap: 12px;
+    justify-content: center;
 }
 
-.designClub__mark {
-    display: inline-block;
-    background: var(--white-main);
-    border-radius: 999px;
-}
-
-.designClub__mark--wide {
-    width: 46px;
-    height: 38px;
-}
-
-.designClub__mark--mid {
-    width: 38px;
-    height: 38px;
-}
-
-.designClub__mark--tall {
-    width: 46px;
-    height: 40px;
-}
-
-.designClub__mark--square {
-    width: 38px;
-    height: 38px;
-}
-
-.designClub__mark--dot {
-    width: 6px;
-    height: 6px;
-    background: #565656;
+.designClub__logo {
+    max-height: 40px;
+    width: auto;
+    display: block;
 }
 
 .designClub__section {
@@ -562,7 +536,7 @@
 }
 
 @media (max-width: 768px) {
-    .designClub__marks {
+    .designClub__logoWrap {
         display: none;
     }
 
